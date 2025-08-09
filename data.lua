@@ -1,0 +1,13 @@
+local mod_data = require("prototypes.mod-data")
+mod_data:create()
+
+require("prototypes.aspects")
+require("prototypes.resources")
+require("prototypes.item-types")
+require("prototypes.item-groups")
+require("prototypes.recipe-category")
+require("prototypes.furnace")
+require("prototypes.centrifuge")
+require("prototypes.fabricator")
+require("prototypes.arcane-stone")
+require("prototypes.recipe")
