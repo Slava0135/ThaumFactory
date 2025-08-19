@@ -17,12 +17,5 @@ data:extend({
     pick_sound = item_sounds.brick_inventory_pickup,
     drop_sound = item_sounds.brick_inventory_move,
     stack_size = 100,
-    place_as_tile =
-    {
-      -- TODO
-      result = "stone-path",
-      condition_size = 1,
-      condition = { layers = { water_tile = true } }
-    }
   },
 })
