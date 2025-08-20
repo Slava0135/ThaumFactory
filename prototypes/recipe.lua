@@ -103,12 +103,58 @@ data:extend({
     name = "thaumfactory-alumentum",
     category = "thaumfactory-fabricate",
     ingredients = {
-      { type = "item",  name = "coal",                         amount = 1 },
-      { type = "fluid", name = "thaumfactory-aspect-fire",     amount = 3 },
-      { type = "fluid", name = "thaumfactory-aspect-entropy",  amount = 3 },
-      { type = "fluid", name = "thaumfactory-aspect-energy", amount = 3 },
+      { type = "item",  name = "coal",                        amount = 1 },
+      { type = "fluid", name = "thaumfactory-aspect-fire",    amount = 3 },
+      { type = "fluid", name = "thaumfactory-aspect-entropy", amount = 3 },
+      { type = "fluid", name = "thaumfactory-aspect-energy",  amount = 3 },
     },
     results = { { type = "item", name = "thaumfactory-alumentum", amount = 1 } },
     enabled = true -- TODO
-  }
+  },
+  {
+    type = "recipe",
+    name = "thaumfactory-native-iron-cluster",
+    category = "thaumfactory-fabricate",
+    ingredients = {
+      { type = "item",  name = "iron-ore",                  amount = 1 },
+      { type = "fluid", name = "thaumfactory-aspect-metal", amount = 1 },
+      { type = "fluid", name = "thaumfactory-aspect-order", amount = 1 },
+    },
+    results = { { type = "item", name = "thaumfactory-native-iron-cluster", amount = 1 } },
+    enabled = true -- TODO
+  },
+  {
+    type = "recipe",
+    name = "thaumfactory-native-iron-cluster-smelt",
+    category = "smelting",
+    auto_recycle = false,
+    energy_required = 3.2,
+    ingredients = { { type = "item", name = "thaumfactory-native-iron-cluster", amount = 1 } },
+    results = { { type = "item", name = "iron-plate", amount = 2 } },
+    allow_productivity = true,
+    enabled = true -- TODO
+  },
+  {
+    type = "recipe",
+    name = "thaumfactory-native-copper-cluster",
+    category = "thaumfactory-fabricate",
+    ingredients = {
+      { type = "item",  name = "copper-ore",                amount = 1 },
+      { type = "fluid", name = "thaumfactory-aspect-metal", amount = 1 },
+      { type = "fluid", name = "thaumfactory-aspect-order", amount = 1 },
+    },
+    results = { { type = "item", name = "thaumfactory-native-copper-cluster", amount = 1 } },
+    enabled = true -- TODO
+  },
+  {
+    type = "recipe",
+    name = "thaumfactory-native-copper-cluster-smelt",
+    category = "smelting",
+    auto_recycle = false,
+    energy_required = 3.2,
+    ingredients = { { type = "item", name = "thaumfactory-native-copper-cluster", amount = 1 } },
+    results = { { type = "item", name = "copper-plate", amount = 2 } },
+    allow_productivity = true,
+    enabled = true -- TODO
+  },
 })
