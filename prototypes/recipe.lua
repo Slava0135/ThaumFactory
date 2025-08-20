@@ -157,4 +157,45 @@ data:extend({
     allow_productivity = true,
     enabled = true -- TODO
   },
+  {
+    type = "recipe",
+    name = "thaumfactory-native-uranium-cluster",
+    category = "thaumfactory-fabricate",
+    ingredients = {
+      { type = "item",  name = "uranium-ore",                amount = 1 },
+      { type = "fluid", name = "thaumfactory-aspect-energy", amount = 3 },
+      { type = "fluid", name = "thaumfactory-aspect-light",  amount = 1 },
+      { type = "fluid", name = "thaumfactory-aspect-order",  amount = 1 },
+    },
+    results = { { type = "item", name = "thaumfactory-native-uranium-cluster", amount = 1 } },
+    enabled = true -- TODO
+  },
+  {
+    type = "recipe",
+    name = "thaumfactory-native-uranium-processing",
+    energy_required = 12,
+    auto_recycle = false,
+    category = "centrifuging",
+    ingredients = { { type = "item", name = "thaumfactory-native-uranium-cluster", amount = 10 } },
+    icon = "__base__/graphics/icons/uranium-processing.png",
+    subgroup = "uranium-processing",
+    order = "a[uranium-processing]-a[uranium-processing]-native",
+    results =
+    {
+      {
+        type = "item",
+        name = "uranium-235",
+        probability = 0.007,
+        amount = 2
+      },
+      {
+        type = "item",
+        name = "uranium-238",
+        probability = 0.993,
+        amount = 2
+      }
+    },
+    allow_productivity = true,
+    enabled = true -- TODO
+  },
 })
