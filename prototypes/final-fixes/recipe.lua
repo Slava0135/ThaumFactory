@@ -68,7 +68,7 @@ for element, a in pairs(mod_data.aspects) do
     })
   end
   local crystal_name = "thaumfactory-" .. element .. "-crystal"
-  local crystal = data.raw["item"][crystal_name]
+  local crystal = data.raw["tool"][crystal_name]
   data:extend({
     {
       type = "recipe",

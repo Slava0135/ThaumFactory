@@ -198,4 +198,16 @@ data:extend({
     allow_productivity = true,
     enabled = true -- TODO
   },
+  {
+    type = "recipe",
+    name = "thaumfactory-arcane-lab",
+    energy_required = 2,
+    ingredients =
+    {
+      -- TODO
+      { type = "item", name = "thaumfactory-arcane-stone-brick", amount = 1 },
+    },
+    results = { { type = "item", name = "thaumfactory-arcane-lab", amount = 1 } },
+    enabled = true
+  },
 })

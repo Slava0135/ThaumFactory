@@ -36,8 +36,9 @@ local function aspect(element, color, tier, component1, component2)
   item_aspects["thaumfactory-" .. element .. "-crystal"] = crystal_aspects
   data:extend({
     {
-      type = "item",
+      type = "tool",
       name = "thaumfactory-" .. element .. "-crystal",
+      durability = 1,
       icons = {
         {
           icon = "__thaumfactory__/graphics/icons/pure-crystal.png",

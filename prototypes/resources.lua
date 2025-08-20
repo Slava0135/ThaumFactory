@@ -11,8 +11,9 @@ local function shard(element, color)
 
   data:extend({
     {
-      type = "item",
+      type = "tool",
       name = "thaumfactory-" .. element .. "-shard",
+      durability = 1,
       icons = {
         {
           icon = "__thaumfactory__/graphics/icons/pure-shard.png",
