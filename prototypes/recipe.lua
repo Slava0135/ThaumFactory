@@ -58,7 +58,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "thaumfactory-fire-firearm-magazine-shard",
+    name = "thaumfactory-fire-firearm-magazine",
     ingredients = {
       { type = "item", name = "firearm-magazine",        amount = 1 },
       { type = "item", name = "thaumfactory-fire-shard", amount = 1 },
@@ -68,32 +68,10 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "thaumfactory-fire-firearm-magazine-aspect",
-    category = "thaumfactory-fabricate",
-    ingredients = {
-      { type = "item",  name = "firearm-magazine",         amount = 1 },
-      { type = "fluid", name = "thaumfactory-aspect-fire", amount = 1 },
-    },
-    results = { { type = "item", name = "thaumfactory-fire-firearm-magazine", amount = 1 } },
-    enabled = true -- TODO
-  },
-  {
-    type = "recipe",
-    name = "thaumfactory-air-firearm-magazine-shard",
+    name = "thaumfactory-air-firearm-magazine",
     ingredients = {
       { type = "item", name = "firearm-magazine",       amount = 1 },
       { type = "item", name = "thaumfactory-air-shard", amount = 1 },
-    },
-    results = { { type = "item", name = "thaumfactory-air-firearm-magazine", amount = 1 } },
-    enabled = true -- TODO
-  },
-  {
-    type = "recipe",
-    name = "thaumfactory-air-firearm-magazine-aspect",
-    category = "thaumfactory-fabricate",
-    ingredients = {
-      { type = "item",  name = "firearm-magazine",        amount = 1 },
-      { type = "fluid", name = "thaumfactory-aspect-air", amount = 1 },
     },
     results = { { type = "item", name = "thaumfactory-air-firearm-magazine", amount = 1 } },
     enabled = true -- TODO
