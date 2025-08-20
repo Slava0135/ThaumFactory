@@ -47,7 +47,7 @@ local function aspect(element, color, tier, component1, component2)
       },
       subgroup = "thaumfactory-resources",
       order = "t-crystal-" .. tier .. "-" .. order,
-      stack_size = 50,
+      stack_size = 100,
     },
   })
 end
