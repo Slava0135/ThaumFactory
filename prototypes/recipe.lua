@@ -188,4 +188,16 @@ data:extend({
     results = { { type = "item", name = "thaumfactory-arcane-lab", amount = 1 } },
     enabled = true
   },
+
+  {
+    type = "recipe",
+    name = "thaumfactory-arcane-stone-wall",
+    ingredients =
+    {
+      { type = "item", name = "thaumfactory-arcane-stone-brick", amount = 5 },
+    },
+    results = { { type = "item", name = "thaumfactory-arcane-stone-wall", amount = 1 } },
+    -- TODO
+    enabled = true
+  },
 })
