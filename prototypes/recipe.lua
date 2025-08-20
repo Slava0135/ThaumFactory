@@ -97,5 +97,18 @@ data:extend({
     },
     results = { { type = "item", name = "thaumfactory-air-firearm-magazine", amount = 1 } },
     enabled = true -- TODO
+  },
+  {
+    type = "recipe",
+    name = "thaumfactory-alumentum",
+    category = "thaumfactory-fabricate",
+    ingredients = {
+      { type = "item",  name = "coal",                         amount = 1 },
+      { type = "fluid", name = "thaumfactory-aspect-fire",     amount = 3 },
+      { type = "fluid", name = "thaumfactory-aspect-entropy",  amount = 3 },
+      { type = "fluid", name = "thaumfactory-aspect-energy", amount = 3 },
+    },
+    results = { { type = "item", name = "thaumfactory-alumentum", amount = 1 } },
+    enabled = true -- TODO
   }
 })
