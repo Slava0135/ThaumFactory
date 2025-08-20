@@ -48,3 +48,4 @@ Icons
 - [pure-shard.png](icons/pure-shard.png): made by slava0135 (*CC BY-SA 4.0*)
 - [pure-crystal.png](icons/pure-crystal.png): made by slava0135 (*CC BY-SA 4.0*)
 - [alumentum.png](icons/alumentum.png): made by slava0135 (*CC BY-SA 4.0*)
+- [native-cluster.png](icons/native-cluster.png): made by slava0135 (*CC BY-SA 4.0*)
