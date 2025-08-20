@@ -56,4 +56,25 @@ data:extend({
     results = { { type = "item", name = "thaumfactory-arcane-fabricator", amount = 1 } },
     enabled = true -- TODO
   },
+  {
+    type = "recipe",
+    name = "thaumfactory-fire-firearm-magazine-shard",
+    ingredients = {
+      { type = "item", name = "firearm-magazine",        amount = 1 },
+      { type = "item", name = "thaumfactory-fire-shard", amount = 1 },
+    },
+    results = { { type = "item", name = "thaumfactory-fire-firearm-magazine", amount = 1 } },
+    enabled = true -- TODO
+  },
+  {
+    type = "recipe",
+    name = "thaumfactory-fire-firearm-magazine-aspect",
+    category = "thaumfactory-fabricate",
+    ingredients = {
+      { type = "item",  name = "firearm-magazine",         amount = 1 },
+      { type = "fluid", name = "thaumfactory-aspect-fire", amount = 1 },
+    },
+    results = { { type = "item", name = "thaumfactory-fire-firearm-magazine", amount = 1 } },
+    enabled = true -- TODO
+  }
 })
