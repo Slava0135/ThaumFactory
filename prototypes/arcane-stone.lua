@@ -8,7 +8,6 @@ data:extend({
   {
     type = "item",
     name = "thaumfactory-arcane-stone-brick",
-    icon = "__base__/graphics/icons/stone-brick.png",
     icons = {
       {
         icon = "__base__/graphics/icons/stone-brick.png",
