@@ -188,7 +188,6 @@ data:extend({
     results = { { type = "item", name = "thaumfactory-arcane-lab", amount = 1 } },
     enabled = true
   },
-
   {
     type = "recipe",
     name = "thaumfactory-arcane-stone-wall",
@@ -197,6 +196,18 @@ data:extend({
       { type = "item", name = "thaumfactory-arcane-stone-brick", amount = 5 },
     },
     results = { { type = "item", name = "thaumfactory-arcane-stone-wall", amount = 1 } },
+    -- TODO
+    enabled = true
+  },
+  {
+    type = "recipe",
+    name = "thaumfactory-fire-rune-stone",
+    ingredients =
+    {
+      -- TODO
+      { type = "item", name = "thaumfactory-arcane-stone-brick", amount = 1 },
+    },
+    results = { { type = "item", name = "thaumfactory-fire-rune-stone", amount = 1 } },
     -- TODO
     enabled = true
   },

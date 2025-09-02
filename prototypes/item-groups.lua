@@ -32,8 +32,14 @@ data:extend({
   },
   {
     type = "item-subgroup",
-    name = "thaumfactory-recipes",
+    name = "thaumfactory-runes",
     group = "thaumfactory",
     order = "d"
+  },
+  {
+    type = "item-subgroup",
+    name = "thaumfactory-recipes",
+    group = "thaumfactory",
+    order = "e"
   },
 })
