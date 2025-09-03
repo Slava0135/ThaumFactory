@@ -2,8 +2,10 @@ script.on_event(defines.events.on_player_changed_position,
   function(event)
     local player = game.get_player(event.player_index)
     if player.controller_type == defines.controllers.character then
-      if player.get_main_inventory().get_item_count("thaumfactory-fire-rune-stone") >= 1 then
+      local rune = player.get_main_inventory().find_item_stack("thaumfactory-fire-rune-stone")
+      if rune and rune.durability > 1 then
         player.surface.create_entity { name = "fire-flame", position = player.position, force = "player" }
+        rune.drain_durability(1)
       end
     end
   end
