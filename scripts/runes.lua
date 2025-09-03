@@ -1,3 +1,4 @@
+-- fire rune: restore durability
 script.on_event(defines.events.on_tick,
   function(_)
     for _, player in pairs(game.players) do
