@@ -2,8 +2,20 @@ script.on_event(defines.events.on_player_changed_position,
   function(event)
     local player = game.get_player(event.player_index)
     if player.controller_type == defines.controllers.character then
-      if player.get_inventory(defines.inventory.character_main).get_item_count("thaumfactory-fire-rune-stone") >= 1 then
+      if player.get_main_inventory().get_item_count("thaumfactory-fire-rune-stone") >= 1 then
         player.surface.create_entity { name = "fire-flame", position = player.position, force = "player" }
+      end
+    end
+  end
+)
+
+script.on_event(defines.events.on_entity_damaged,
+  function(event)
+    -- idk how to get player itself
+    local inventory = event.entity.get_main_inventory()
+    if inventory and event.damage_type.valid and event.damage_type.name == "fire" then
+      if inventory.get_item_count("thaumfactory-fire-rune-stone") >= 1 then
+        event.entity.damage(-event.final_damage_amount, "player")
       end
     end
   end
