@@ -1,3 +1,22 @@
+script.on_event(defines.events.on_tick,
+  function(_)
+    for _, player in pairs(game.players) do
+      if player.controller_type == defines.controllers.character then
+        local rune = player.get_main_inventory().find_item_stack("thaumfactory-fire-rune-stone")
+        local crystal = player.get_main_inventory().find_item_stack("thaumfactory-fire-crystal")
+        if rune and crystal then
+          local old_durability = rune.durability
+          rune.add_durability(1)
+          if old_durability ~= rune.durability then
+            crystal.drain_durability(1)
+          end
+        end
+      end
+    end
+  end
+)
+
+-- fire rune: spawn fire
 script.on_event(defines.events.on_player_changed_position,
   function(event)
     local player = game.get_player(event.player_index)
@@ -11,9 +30,9 @@ script.on_event(defines.events.on_player_changed_position,
   end
 )
 
+-- fire rune: fire resistance
 script.on_event(defines.events.on_entity_damaged,
   function(event)
-    -- idk how to get player itself
     local inventory = event.entity.get_main_inventory()
     if inventory and event.damage_type.valid and event.damage_type.name == "fire" then
       if inventory.get_item_count("thaumfactory-fire-rune-stone") >= 1 then
