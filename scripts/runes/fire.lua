@@ -2,6 +2,12 @@ local durability = require("durability")
 
 durability:register_restore_handler("thaumfactory-fire-rune-stone", "thaumfactory-fire-crystal")
 
+script.on_init(
+  function()
+    storage.fire_distance = {}
+  end
+)
+
 -- spawn fire
 script.on_event(defines.events.on_player_changed_position,
   function(event)
@@ -10,7 +16,12 @@ script.on_event(defines.events.on_player_changed_position,
       local rune = player.get_main_inventory().find_item_stack("thaumfactory-fire-rune-stone")
       if rune and rune.durability > 1 then
         player.surface.create_entity { name = "fire-flame", position = player.position, force = "player" }
-        rune.drain_durability(1)
+        storage.fire_distance[player.index] = (storage.fire_distance[player.index] or 0) + 1
+        -- drain durability every 12 tiles
+        if storage.fire_distance[player.index] >= 12 then
+          storage.fire_distance[player.index] = 0
+          rune.drain_durability(1)
+        end
       end
     end
   end
