@@ -49,3 +49,4 @@ Icons
 - [pure-crystal.png](icons/pure-crystal.png): made by slava0135 (*CC BY-SA 4.0*)
 - [alumentum.png](icons/alumentum.png): made by slava0135 (*CC BY-SA 4.0*)
 - [native-cluster.png](icons/native-cluster.png): made by slava0135 (*CC BY-SA 4.0*)
+- [rune.png](icons/rune.png): made by slava0135 (*CC BY-SA 4.0*)

@@ -6,7 +6,12 @@ data:extend({
     name = "thaumfactory-fire-rune-stone",
     icons = {
       {
-        icon = "__base__/graphics/icons/stone-brick.png",
+        icon = "__thaumfactory__/graphics/icons/rune.png",
+      },
+      {
+        icon = "__thaumfactory__/graphics/icons/fire.png",
+        icon_size = 64,
+        scale = 0.25,
       }
     },
     subgroup = "thaumfactory-runes",
