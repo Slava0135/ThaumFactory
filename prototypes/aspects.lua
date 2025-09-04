@@ -83,7 +83,6 @@ aspect("travel", color:hex2rgb("#E0585B"), 2, "motion", "earth")
 aspect("metal", color:hex2rgb("#B5B5CD"), 2, "earth", "crystal")
 aspect("death", color:hex2rgb("#887788"), 2, "entropy", "life")
 aspect("magic", color:hex2rgb("#9700C0"), 2, "energy", "void")
-aspect("heal", color:hex2rgb("#FF2F34"), 2, "order", "life")
 aspect("darkness", color:hex2rgb("#222222"), 2, "light", "void")
 aspect("trap", color:hex2rgb("#9A8080"), 2, "motion", "entropy")
 aspect("flight", color:hex2rgb("#E7E7D7"), 2, "air", "motion")
@@ -142,7 +141,7 @@ item_aspects["stone"] = { entropy = 1, earth = 1 }
 item_aspects["iron-ore"] = { metal = 1, earth = 1 }
 item_aspects["copper-ore"] = { metal = 1, earth = 1, exchange = 1 }
 item_aspects["uranium-ore"] = { earth = 1, energy = 3, light = 1 }
-item_aspects["raw-fish"] = { water = 3, life = 2, hunger = 1, heal = 1 }
+item_aspects["raw-fish"] = { water = 3, life = 3, hunger = 1 }
 
 -- materials
 item_aspects["iron-plate"] = { metal = 3 }
