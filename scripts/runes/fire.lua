@@ -1,21 +1,6 @@
--- restore durability
-script.on_event(defines.events.on_tick,
-  function(_)
-    for _, player in pairs(game.players) do
-      if player.controller_type == defines.controllers.character then
-        local rune = player.get_main_inventory().find_item_stack("thaumfactory-fire-rune-stone")
-        local crystal = player.get_main_inventory().find_item_stack("thaumfactory-fire-crystal")
-        if rune and crystal then
-          local old_durability = rune.durability
-          rune.add_durability(1)
-          if old_durability ~= rune.durability then
-            crystal.drain_durability(1)
-          end
-        end
-      end
-    end
-  end
-)
+local durability = require("durability")
+
+durability:register_restore_handler("thaumfactory-fire-rune-stone", "thaumfactory-fire-crystal")
 
 -- spawn fire
 script.on_event(defines.events.on_player_changed_position,

@@ -43,4 +43,25 @@ data:extend({
     stack_size = 1,
     durability = 720,
   },
+  {
+    type = "tool",
+    name = "thaumfactory-motion-rune-stone",
+    icons = {
+      {
+        icon = "__thaumfactory__/graphics/icons/rune.png",
+      },
+      {
+        icon = "__thaumfactory__/graphics/icons/motion.png",
+        icon_size = 64,
+        scale = 0.25,
+      }
+    },
+    subgroup = "thaumfactory-runes",
+    order = "t-motion-rune-stone",
+    inventory_move_sound = item_sounds.brick_inventory_move,
+    pick_sound = item_sounds.brick_inventory_pickup,
+    drop_sound = item_sounds.brick_inventory_move,
+    stack_size = 1,
+    durability = 720,
+  },
 })
