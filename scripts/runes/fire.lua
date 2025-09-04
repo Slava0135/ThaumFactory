@@ -1,4 +1,4 @@
--- fire rune: restore durability
+-- restore durability
 script.on_event(defines.events.on_tick,
   function(_)
     for _, player in pairs(game.players) do
@@ -17,7 +17,7 @@ script.on_event(defines.events.on_tick,
   end
 )
 
--- fire rune: spawn fire
+-- spawn fire
 script.on_event(defines.events.on_player_changed_position,
   function(event)
     local player = game.get_player(event.player_index)
@@ -31,7 +31,7 @@ script.on_event(defines.events.on_player_changed_position,
   end
 )
 
--- fire rune: fire resistance
+-- fire resistance
 script.on_event(defines.events.on_entity_damaged,
   function(event)
     local inventory = event.entity.get_main_inventory()

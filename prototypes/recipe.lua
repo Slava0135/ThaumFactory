@@ -211,4 +211,16 @@ data:extend({
     -- TODO
     enabled = true
   },
+  {
+    type = "recipe",
+    name = "thaumfactory-life-rune-stone",
+    ingredients =
+    {
+      -- TODO
+      { type = "item", name = "thaumfactory-arcane-stone-brick", amount = 1 },
+    },
+    results = { { type = "item", name = "thaumfactory-life-rune-stone", amount = 1 } },
+    -- TODO
+    enabled = true
+  },
 })
