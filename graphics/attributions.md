@@ -22,7 +22,6 @@ Icons
 - [travel.png](icons/travel.png): "journey.svg" made by [__lorc__](http://lorcblog.blogspot.com) (*CC BY 3.0*)
 - [death.png](icons/death.png): "pirate-grave.svg" made by [__lorc__](http://lorcblog.blogspot.com) (*CC BY 3.0*)
 - [magic.png](icons/magic.png): "fairy-wand.svg" made by [__lorc__](http://lorcblog.blogspot.com) (*CC BY 3.0*)
-- [heal.png](icons/heal.png): "heart-bottle.svg" made by [__lorc__](http://lorcblog.blogspot.com) (*CC BY 3.0*)
 - [darkness.png](icons/darkness.png): "eclipse.svg" made by [__lorc__](http://lorcblog.blogspot.com) (*CC BY 3.0*)
 - [trap.png](icons/trap.png): "wolf-trap.svg" made by [__lorc__](http://lorcblog.blogspot.com) (*CC BY 3.0*)
 - [flight.png](icons/flight.png): "feather.svg" made by [__lorc__](http://lorcblog.blogspot.com) (*CC BY 3.0*)
