@@ -13,7 +13,7 @@ local function on_player_changed_position(event)
         if rune.durability >= 1 then
           -- case 1: player has inactive (valid) rune - track item number and modify speed
           storage.active_motion_modifiers[player.index] = { item_number = rune.item_number, distance = 0 }
-          player.character_running_speed_modifier = 0.3
+          player.character_running_speed_modifier = 0.6
         end
       else
         if rune.durability >= 1 then
