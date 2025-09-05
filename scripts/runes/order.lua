@@ -10,7 +10,7 @@ local function on_30th_tick()
   for _, player in pairs(game.players) do
     if player.controller_type == defines.controllers.character then
       local rune = player.get_main_inventory().find_item_stack("thaumfactory-order-rune-stone")
-      if rune and rune.durability > 1 and player.character and player.character.get_health_ratio() < 1 then
+      if rune and rune.durability > 1 and player.character and (player.character.get_health_ratio() or 666) < 1 then
         player.character.damage(-1, "player")
         rune.drain_durability(1)
       end

@@ -205,7 +205,6 @@ data:extend({
     ingredients =
     {
       -- TODO
-      { type = "item", name = "thaumfactory-arcane-stone-brick", amount = 1 },
     },
     results = { { type = "item", name = "thaumfactory-fire-rune-stone", amount = 1 } },
     -- TODO
@@ -217,7 +216,6 @@ data:extend({
     ingredients =
     {
       -- TODO
-      { type = "item", name = "thaumfactory-arcane-stone-brick", amount = 1 },
     },
     results = { { type = "item", name = "thaumfactory-life-rune-stone", amount = 1 } },
     -- TODO
@@ -229,7 +227,6 @@ data:extend({
     ingredients =
     {
       -- TODO
-      { type = "item", name = "thaumfactory-arcane-stone-brick", amount = 1 },
     },
     results = { { type = "item", name = "thaumfactory-motion-rune-stone", amount = 1 } },
     -- TODO
@@ -241,7 +238,6 @@ data:extend({
     ingredients =
     {
       -- TODO
-      { type = "item", name = "thaumfactory-arcane-stone-brick", amount = 1 },
     },
     results = { { type = "item", name = "thaumfactory-order-rune-stone", amount = 1 } },
     -- TODO
@@ -253,7 +249,6 @@ data:extend({
     ingredients =
     {
       -- TODO
-      { type = "item", name = "thaumfactory-arcane-stone-brick", amount = 1 },
     },
     results = { { type = "item", name = "thaumfactory-light-rune-stone", amount = 1 } },
     -- TODO
@@ -265,7 +260,6 @@ data:extend({
     ingredients =
     {
       -- TODO
-      { type = "item", name = "thaumfactory-arcane-stone-brick", amount = 1 },
     },
     results = { { type = "item", name = "thaumfactory-mine-rune-stone", amount = 1 } },
     -- TODO
@@ -277,9 +271,19 @@ data:extend({
     ingredients =
     {
       -- TODO
-      { type = "item", name = "thaumfactory-arcane-stone-brick", amount = 1 },
     },
     results = { { type = "item", name = "thaumfactory-tool-rune-stone", amount = 1 } },
+    -- TODO
+    enabled = true
+  },
+  {
+    type = "recipe",
+    name = "thaumfactory-craft-rune-stone",
+    ingredients =
+    {
+      -- TODO
+    },
+    results = { { type = "item", name = "thaumfactory-craft-rune-stone", amount = 1 } },
     -- TODO
     enabled = true
   },

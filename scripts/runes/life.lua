@@ -10,7 +10,7 @@ local function on_12th_tick()
   for _, player in pairs(game.players) do
     if player.controller_type == defines.controllers.character then
       local rune = player.get_main_inventory().find_item_stack("thaumfactory-life-rune-stone")
-      if rune and rune.durability > 1 and player.character and player.character.get_health_ratio() < 1 then
+      if rune and rune.durability > 1 and player.character and (player.character.get_health_ratio() or 666) < 1 then
         local heal = 1
         player.character.damage(-heal, "player")
         storage.life_healed[player.index] = (storage.life_healed[player.index] or 0) + heal
