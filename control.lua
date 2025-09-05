@@ -6,4 +6,5 @@ handler.add_libraries({
   require("scripts.runes.motion"),
   require("scripts.runes.order"),
   require("scripts.runes.light"),
+  require("scripts.runes.mine"),
 })
