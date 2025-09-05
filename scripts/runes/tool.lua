@@ -13,8 +13,8 @@ local function on_2th_tick()
           if rune.durability >= 1 then
             -- case 1: player has inactive (valid) rune - track item number and modify speed
             storage.active_tool_modifiers[player.index] = { item_number = rune.item_number, built = 0 }
-            -- default reach is 10, double it
-            player.character_build_distance_bonus = 10
+            -- default reach is 10, +60%
+            player.character_build_distance_bonus = 6
           end
         else
           if rune.durability >= 1 then

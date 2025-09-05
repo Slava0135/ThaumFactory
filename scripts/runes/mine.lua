@@ -15,9 +15,9 @@ local function on_2th_tick()
             storage.active_mine_modifiers[player.index] = { item_number = rune.item_number, mined = 0 }
             -- this is crazy
             player.character_mining_speed_modifier = 12
-            -- default reach is 10, double it
-            player.character_reach_distance_bonus = 10
-            -- default reach is 3, double it
+            -- default reach is 10: +60%
+            player.character_reach_distance_bonus = 6
+            -- default reach is 3: +100%
             player.character_resource_reach_distance_bonus = 3
           end
         else
