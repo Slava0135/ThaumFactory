@@ -1,7 +1,6 @@
 local durability = require("durability")
 
-local restore_handler_id, restore_handler = durability:register_event_handler("thaumfactory-motion-rune-stone",
-  "thaumfactory-motion-crystal")
+local restore_handler_id, restore_handler = durability:register_event_handler("motion")
 
 local function on_player_changed_position(event)
   local player = game.get_player(event.player_index)

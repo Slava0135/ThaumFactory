@@ -1,7 +1,6 @@
 local durability = require("durability")
 
-local restore_handler_id, restore_handler = durability:register_event_handler("thaumfactory-fire-rune-stone",
-  "thaumfactory-fire-crystal")
+local restore_handler_id, restore_handler = durability:register_event_handler("fire")
 
 -- spawn fire
 local function on_player_changed_position(event)

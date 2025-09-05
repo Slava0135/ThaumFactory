@@ -1,7 +1,6 @@
 local durability = require("durability")
 
-local restore_handler_id, restore_handler = durability:register_event_handler("thaumfactory-life-rune-stone",
-  "thaumfactory-life-crystal")
+local restore_handler_id, restore_handler = durability:register_event_handler("life")
 
 -- regeneration
 -- 5 per second
