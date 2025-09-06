@@ -38,8 +38,14 @@ data:extend({
   },
   {
     type = "item-subgroup",
-    name = "thaumfactory-recipes",
+    name = "thaumfactory-aura",
     group = "thaumfactory",
     order = "e"
+  },
+  {
+    type = "item-subgroup",
+    name = "thaumfactory-recipes",
+    group = "thaumfactory",
+    order = "f"
   },
 })

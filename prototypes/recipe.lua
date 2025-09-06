@@ -58,6 +58,16 @@ data:extend({
   },
   {
     type = "recipe",
+    name = "thaumfactory-aura-pylon",
+    ingredients = {
+      -- TODO
+      { type = "item", name = "thaumfactory-arcane-stone-brick", amount = 1 },
+    },
+    results = { { type = "item", name = "thaumfactory-aura-pylon", amount = 1 } },
+    enabled = true -- TODO
+  },
+  {
+    type = "recipe",
     name = "thaumfactory-fire-firearm-magazine",
     ingredients = {
       { type = "item", name = "firearm-magazine",        amount = 1 },
