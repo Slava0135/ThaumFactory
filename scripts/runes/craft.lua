@@ -47,6 +47,7 @@ local function on_12th_tick()
           if entity.unit_number and not entity.has_flag("not-repairable") and (entity.get_health_ratio() or 666) < 1 then
             entity.damage(-1, "player")
             craft.repaired = craft.repaired + 1
+            entity.surface.play_sound({ path = "utility/default_manual_repair", entity.position, volume_modifier = 0.1 })
             -- drain durability every 12 hp repaired
             if craft.repaired >= 12 then
               craft.repaired = 0
