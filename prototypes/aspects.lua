@@ -4,7 +4,7 @@ local aspects = {}
 mod_data.aspects = aspects
 local item_aspects = {}
 mod_data.item_aspects = item_aspects
-local hash = require("hash")
+local hash = require("lib.hash")
 
 local function aspect(element, color, tier, component1, component2)
   -- aspects are ordered by tier
