@@ -1,4 +1,5 @@
 local area = require("area")
+local particle = require("particle")
 
 local function on_60th_tick()
   local aspect_per_use = 1
@@ -23,16 +24,20 @@ local function on_60th_tick()
           local minable = prototypes.entity[entity.name].mineable_properties
           local amount = aspect_per_use * resource_use_modifier * minable.mining_time
           if not minable.required_fluid and fluid >= amount then
+            local position = entity.position
             entity.mine { inventory = inventory }
             pylon.remove_fluid { name = "thaumfactory-aspect-mine", amount = amount }
+            particle:trail { from = pylon.position, to = position, name = "huge-rock-stone-particle-small", surface = pylon.surface, density = 3, wide = false }
             goto next
           end
         end
         local entities = pylon.surface.find_entities_filtered { area = pylon_area }
         for _, entity in pairs(entities) do
           if entity.minable and not entity.unit_number then
+            local position = entity.position
             entity.mine { inventory = inventory }
             pylon.remove_fluid { name = "thaumfactory-aspect-mine", amount = aspect_per_use }
+            particle:trail { from = pylon.position, to = position, name = "huge-rock-stone-particle-small", surface = pylon.surface, density = 3, wide = false }
             goto next
           end
         end
