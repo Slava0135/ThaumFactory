@@ -15,7 +15,31 @@ local function on_tick()
         time_to_live = 1,
         draw_on_ground = false,
         only_in_alt_mode = true,
-        color = util.color("#800080"),
+        color = util.color("#faa838"),
+      }
+      rendering.draw_line {
+        surface = pylon.surface,
+        from = pylon.position,
+        to = pylon_area.left_top,
+        gap_length = 0.5,
+        dash_length = 0.5,
+        width = 2,
+        time_to_live = 1,
+        draw_on_ground = false,
+        only_in_alt_mode = true,
+        color = util.color("#faa838"),
+      }
+      rendering.draw_line {
+        surface = pylon.surface,
+        from = pylon.position,
+        to = pylon_area.right_bottom,
+        gap_length = 0.5,
+        dash_length = 0.5,
+        width = 2,
+        time_to_live = 1,
+        draw_on_ground = false,
+        only_in_alt_mode = true,
+        color = util.color("#faa838"),
       }
       rendering.draw_rectangle {
         surface = pylon.surface,
@@ -25,7 +49,7 @@ local function on_tick()
         time_to_live = 1,
         draw_on_ground = false,
         only_in_alt_mode = true,
-        color = util.color("#faa838"),
+        color = util.color("#800080"),
       }
     end
   end
