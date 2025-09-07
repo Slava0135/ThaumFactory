@@ -15,7 +15,8 @@ local function on_60th_tick()
         if #storage_entities == 0 then
           goto next
         end
-        local inventory = storage_entities[1].get_inventory(defines.inventory.chest)
+        local storage = storage_entities[1]
+        local inventory = storage.get_inventory(defines.inventory.chest)
         if not inventory then
           goto next
         end
@@ -27,7 +28,7 @@ local function on_60th_tick()
             local position = entity.position
             entity.mine { inventory = inventory }
             pylon.remove_fluid { name = "thaumfactory-aspect-mine", amount = amount }
-            particle:trail { from = pylon.position, to = position, name = "huge-rock-stone-particle-small", surface = pylon.surface, density = 3, wide = false }
+            particle:trail { from = position, to = storage.position, name = "huge-rock-stone-particle-small", surface = pylon.surface, density = 3, wide = false }
             goto next
           end
         end
@@ -37,7 +38,7 @@ local function on_60th_tick()
             local position = entity.position
             entity.mine { inventory = inventory }
             pylon.remove_fluid { name = "thaumfactory-aspect-mine", amount = aspect_per_use }
-            particle:trail { from = pylon.position, to = position, name = "huge-rock-stone-particle-small", surface = pylon.surface, density = 3, wide = false }
+            particle:trail { from = position, to = storage.position, name = "huge-rock-stone-particle-small", surface = pylon.surface, density = 3, wide = false }
             goto next
           end
         end
