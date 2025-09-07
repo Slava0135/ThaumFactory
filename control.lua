@@ -14,4 +14,5 @@ handler.add_libraries({
   require("scripts.aura-pylon.gui"),
   require("scripts.aura-pylon.mine"),
   require("scripts.aura-pylon.plant"),
+  require("scripts.aura-pylon.earth"),
 })
