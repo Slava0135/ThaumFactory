@@ -4,7 +4,7 @@ local function on_60th_tick()
   local aspect_per_use = 12
   for _, surface in pairs(game.surfaces) do
     for _, pylon in pairs(surface.find_entities_filtered { name = "thaumfactory-aura-pylon" }) do
-      if (pylon.get_fluid_count("thaumfactory-aspect-plant") or 0) > aspect_per_use then
+      if (pylon.get_fluid_count("thaumfactory-aspect-plant") or 0) >= aspect_per_use then
         local pylon_area = area:pylon(pylon.position)
         local all_trees = prototypes.get_entity_filtered { { filter = "type", type = "tree" } }
         local all_tree_names = {}
