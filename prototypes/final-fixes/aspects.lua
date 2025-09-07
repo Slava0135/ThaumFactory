@@ -1,17 +1,9 @@
 local mod_data = require("prototypes.mod-data"):get()
+local aspect_sorting = require("aspect-sorting")
 
 for name, aspects in pairs(mod_data.item_aspects) do
-  local sorted_aspects = {}
-  for element, n in pairs(aspects) do
-    table.insert(sorted_aspects,
-      { element = element, n = n, tier = mod_data.aspects[element].tier, order = mod_data.aspects[element].order })
-  end
-  table.sort(sorted_aspects, function(a, b)
-    if a.tier < b.tier then
-      return true
-    end
-    return a.tier == b.tier and a.order < b.order
-  end)
+  local sorted_aspects = aspect_sorting:sort(aspects)
+
   -- some random number as base
   local order = 213
   local tooltips = {}

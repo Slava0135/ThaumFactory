@@ -1,19 +1,15 @@
 local mod_data = require("prototypes.mod-data"):get()
+local aspect_sorting = require("aspect-sorting")
 
 for name, a in pairs(mod_data.item_aspects) do
   -- aspects should be sorted so the recipes always use same pipe outputs
-  local sorted_aspects = {}
-  for element, _ in pairs(a) do
-    table.insert(sorted_aspects, { element = element, order = mod_data.aspects[element].order })
-  end
-  table.sort(sorted_aspects, function(a, b)
-    return a.order < b.order
-  end)
+  local sorted_aspects = aspect_sorting:sort(a)
 
   local results = {}
   for i = 1, #sorted_aspects do
     local element = sorted_aspects[i].element
-    table.insert(results, { type = "fluid", name = "thaumfactory-aspect-" .. element, amount = a[element] })
+    local n = sorted_aspects[i].n
+    table.insert(results, { type = "fluid", name = "thaumfactory-aspect-" .. element, amount = n })
   end
 
   data:extend({
