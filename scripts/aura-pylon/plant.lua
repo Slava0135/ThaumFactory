@@ -2,8 +2,9 @@ local area = require("area")
 
 local function on_60th_tick()
   local aspect_per_use = 12
-  for _, surface in pairs(game.surfaces) do
-    for _, pylon in pairs(surface.find_entities_filtered { name = "thaumfactory-aura-pylon" }) do
+  for _, unit_number in pairs(storage.aura_pylons) do
+    local pylon = game.get_entity_by_unit_number(unit_number)
+    if pylon and pylon.valid then
       if (pylon.get_fluid_count("thaumfactory-aspect-plant") or 0) >= aspect_per_use then
         local pylon_area = area:pylon(pylon.position)
         local all_trees = prototypes.get_entity_filtered { { filter = "type", type = "tree" } }
@@ -14,9 +15,9 @@ local function on_60th_tick()
           end
         end
         local tree_name = all_tree_names[math.random(1, #all_tree_names)]
-        local position = surface.find_non_colliding_position_in_box(tree_name, pylon_area, 3, true)
+        local position = pylon.surface.find_non_colliding_position_in_box(tree_name, pylon_area, 3, true)
         if position then
-          if surface.create_entity {
+          if pylon.surface.create_entity {
                 name = tree_name,
                 position = position,
                 force = "neutral",

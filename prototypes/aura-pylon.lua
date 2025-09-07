@@ -19,7 +19,7 @@ data:extend({
     type = "storage-tank",
     name = "thaumfactory-aura-pylon",
     icon = "__base__/graphics/icons/storage-tank.png",
-    flags = { "placeable-player", "player-creation" },
+    flags = { "placeable-player", "player-creation", "get-by-unit-number" },
     minable = { mining_time = 0.5, result = "thaumfactory-aura-pylon" },
     max_health = 500,
     corpse = "storage-tank-remnants",

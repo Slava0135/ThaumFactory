@@ -10,7 +10,8 @@ handler.add_libraries({
   require("scripts.runes.tool"),
   require("scripts.runes.craft"),
 
+  require("scripts.aura-pylon.storage"),
   require("scripts.aura-pylon.gui"),
-  require("scripts.aura-pylon.plant"),
   require("scripts.aura-pylon.mine"),
+  require("scripts.aura-pylon.plant"),
 })
