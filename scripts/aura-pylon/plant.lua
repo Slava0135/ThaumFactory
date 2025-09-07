@@ -32,7 +32,10 @@ local function on_60th_tick()
             pylon.remove_fluid { name = "thaumfactory-aspect-plant", amount = aspect_per_use }
             particle:trail { from = pylon.position, to = position, name = "leaf-particle", surface = pylon.surface, density = 3, wide = true }
             pylon.surface.play_sound({ path = "thaumfactory-sound-magic", position = position })
-            pylon.surface.play_sound { path = "entity-build/" .. entity.prototype.name, position = entity.position }
+            local sound = "entity-build/" .. entity.prototype.name
+            if helpers.is_valid_sound_path(sound) then
+              pylon.surface.play_sound({ path = sound, position = entity.position })
+            end
           end
         end
       end

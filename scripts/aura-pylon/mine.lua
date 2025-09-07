@@ -31,10 +31,15 @@ local function on_60th_tick()
           local amount = aspect_per_use * resource_use_modifier * minable.mining_time
           if not minable.required_fluid and fluid >= amount then
             local position = entity.position
+            local proto_name = entity.prototype.name
             entity.mine { inventory = inventory }
             pylon.remove_fluid { name = "thaumfactory-aspect-mine", amount = amount }
             particle:trail { from = position, to = storage.position, name = "huge-rock-stone-particle-small", surface = pylon.surface, density = 3, wide = false }
             pylon.surface.play_sound({ path = "thaumfactory-sound-magic", position = position })
+            local sound = "entity-mined/" .. proto_name
+            if helpers.is_valid_sound_path(sound) then
+              pylon.surface.play_sound({ path = sound, position = position })
+            end
             goto next
           end
         end
@@ -44,10 +49,15 @@ local function on_60th_tick()
         for _, entity in pairs(entities_shuffled) do
           if entity.minable and not entity.unit_number then
             local position = entity.position
+            local proto_name = entity.prototype.name
             entity.mine { inventory = inventory }
             pylon.remove_fluid { name = "thaumfactory-aspect-mine", amount = aspect_per_use }
             particle:trail { from = position, to = storage.position, name = "huge-rock-stone-particle-small", surface = pylon.surface, density = 3, wide = false }
             pylon.surface.play_sound({ path = "thaumfactory-sound-magic", position = position })
+            local sound = "entity-mined/" .. proto_name
+            if helpers.is_valid_sound_path(sound) then
+              pylon.surface.play_sound({ path = sound, position = position })
+            end
             goto next
           end
         end
