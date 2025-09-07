@@ -17,6 +17,7 @@ local function on_60th_tick()
         if #storage_entities == 0 then
           goto next
         end
+        shuffle:shuffle_array(storage_entities)
         local storage = storage_entities[1]
         local inventory = storage.get_inventory(defines.inventory.chest)
         if not inventory then
