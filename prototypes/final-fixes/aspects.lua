@@ -1,17 +1,28 @@
 local mod_data = require("prototypes.mod-data"):get()
 
 for name, aspects in pairs(mod_data.item_aspects) do
-  local tooltips = {}
+  local sorted_aspects = {}
   for element, n in pairs(aspects) do
-    -- some random number as "base"
-    local order = 220 + mod_data.aspects[element].tier
-    -- max value for order is 255 which is not enough to specify correct order
-    -- TODO: sort based on order, use index instead
-    if order > 255 then
-      order = 255
+    table.insert(sorted_aspects,
+      { element = element, n = n, tier = mod_data.aspects[element].tier, order = mod_data.aspects[element].order })
+  end
+  table.sort(sorted_aspects, function(a, b)
+    if a.tier < b.tier then
+      return true
     end
+    return a.tier == b.tier and a.order < b.order
+  end)
+  -- some random number as base
+  local order = 213
+  local tooltips = {}
+  for _, a in pairs(sorted_aspects) do
     table.insert(tooltips,
-      { name = { "aspect-name." .. element, tostring(n) }, value = { "aspect-description." .. element }, order = order })
+      {
+        name = { "aspect-name." .. a.element, tostring(a.n) },
+        value = { "aspect-description." .. a.element },
+        order = order,
+      })
+    order = order + 1
   end
   for _, proto in ipairs(mod_data.item_types) do
     local item = data.raw[proto][name]
