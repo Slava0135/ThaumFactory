@@ -29,6 +29,7 @@ local function on_60th_tick()
             entity.mine { inventory = inventory }
             pylon.remove_fluid { name = "thaumfactory-aspect-mine", amount = amount }
             particle:trail { from = position, to = storage.position, name = "huge-rock-stone-particle-small", surface = pylon.surface, density = 3, wide = false }
+            pylon.surface.play_sound({ path = "thaumfactory-sound-magic", position = position })
             goto next
           end
         end
@@ -39,6 +40,7 @@ local function on_60th_tick()
             entity.mine { inventory = inventory }
             pylon.remove_fluid { name = "thaumfactory-aspect-mine", amount = aspect_per_use }
             particle:trail { from = position, to = storage.position, name = "huge-rock-stone-particle-small", surface = pylon.surface, density = 3, wide = false }
+            pylon.surface.play_sound({ path = "thaumfactory-sound-magic", position = position })
             goto next
           end
         end

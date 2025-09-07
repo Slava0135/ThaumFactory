@@ -30,6 +30,7 @@ local function on_60th_tick()
               } then
             pylon.remove_fluid { name = "thaumfactory-aspect-plant", amount = aspect_per_use }
             particle:trail { from = pylon.position, to = position, name = "leaf-particle", surface = pylon.surface, density = 3, wide = true }
+            pylon.surface.play_sound({ path = "thaumfactory-sound-magic", position = position })
           end
         end
       end
