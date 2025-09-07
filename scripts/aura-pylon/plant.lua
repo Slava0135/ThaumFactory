@@ -1,4 +1,5 @@
 local area = require("area")
+local math2d = require("__core__.lualib.math2d")
 
 local function on_60th_tick()
   local aspect_per_use = 12
@@ -28,6 +29,41 @@ local function on_60th_tick()
                 create_build_effect_smoke = true,
               } then
             pylon.remove_fluid { name = "thaumfactory-aspect-plant", amount = aspect_per_use }
+            local vector = math2d.position.subtract(position, pylon.position)
+            local direction = math2d.position.get_normalised(vector)
+            local length = math2d.vector.length(vector)
+            local particle_position = pylon.position
+            local offset = math2d.position.divide_scalar(math2d.position.rotate_vector(direction, 90), 4)
+            local density = 3
+            local steps = density * length + 1
+            for i = 0, steps do
+              pylon.surface.create_particle {
+                name = "leaf-particle",
+                position = particle_position,
+                movement = { 0, 0 },
+                height = i / steps,
+                vertical_speed = -0.01,
+                frame_speed = 1,
+              }
+              pylon.surface.create_particle {
+                name = "leaf-particle",
+                position = math2d.position.add(particle_position, offset),
+                movement = { 0, 0 },
+                height = i / steps,
+                vertical_speed = -0.01,
+                frame_speed = 1,
+              }
+              pylon.surface.create_particle {
+                name = "leaf-particle",
+                position = math2d.position.add(particle_position, math2d.position.multiply_scalar(offset, -1)),
+                movement = { 0, 0 },
+                height = i / steps,
+                vertical_speed = -0.01,
+                frame_speed = 1,
+              }
+              particle_position = math2d.position.add(particle_position,
+                math2d.position.multiply_scalar(direction, 1 / density))
+            end
           end
         end
       end
