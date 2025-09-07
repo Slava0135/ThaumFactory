@@ -44,7 +44,7 @@ local function on_12th_tick()
       if rune and rune.durability > 1 and craft and craft.item_number == rune.item_number then
         local entities = player.surface.find_entities_filtered { position = player.position, radius = 10, force = "player" }
         for _, entity in pairs(entities) do
-          if entity.unit_number and (entity.get_health_ratio() or 666) < 1 then
+          if entity.unit_number and not entity.has_flag("not-repairable") and (entity.get_health_ratio() or 666) < 1 then
             entity.damage(-1, "player")
             craft.repaired = craft.repaired + 1
             -- drain durability every 12 hp repaired
