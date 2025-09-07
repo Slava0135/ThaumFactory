@@ -12,18 +12,20 @@ local function on_60th_tick()
         local rock_name = all_rock_names[math.random(1, #all_rock_names)]
         local position = pylon.surface.find_non_colliding_position_in_box(rock_name, pylon_area, 3, true)
         if position then
-          if pylon.surface.create_entity {
-                name = rock_name,
-                position = position,
-                force = "neutral",
-                preserve_ghosts_and_corpses = true,
-                spawn_decorations = true,
-                snap_to_grid = true,
-                create_build_effect_smoke = true,
-              } then
+          local entity = pylon.surface.create_entity {
+            name = rock_name,
+            position = position,
+            force = "neutral",
+            preserve_ghosts_and_corpses = true,
+            spawn_decorations = true,
+            snap_to_grid = true,
+            create_build_effect_smoke = true,
+          }
+          if entity then
             pylon.remove_fluid { name = "thaumfactory-aspect-earth", amount = aspect_per_use }
             particle:trail { from = pylon.position, to = position, name = "huge-rock-stone-particle-small", surface = pylon.surface, density = 3, wide = true }
             pylon.surface.play_sound({ path = "thaumfactory-sound-magic", position = position })
+            pylon.surface.play_sound { path = "entity-build/" .. entity.prototype.name, position = entity.position }
           end
         end
       end
