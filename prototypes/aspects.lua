@@ -1,4 +1,4 @@
-local color = require("color")
+local util = require("__core__.lualib.util")
 local mod_data = require("prototypes.mod-data"):get()
 local aspects = {}
 mod_data.aspects = aspects
@@ -55,61 +55,61 @@ end
 -- not all aspects (TC 4) are added, some of them are not used much / removed in TC 6
 
 -- primal
-aspect("air", color:hex2rgb("#FFFF7E"), 0)
-aspect("fire", color:hex2rgb("#FF5A01"), 0)
-aspect("water", color:hex2rgb("#3CD4FC"), 0)
-aspect("earth", color:hex2rgb("#56C000"), 0)
-aspect("order", color:hex2rgb("#D5D4EC"), 0)
-aspect("entropy", color:hex2rgb("#404040"), 0)
+aspect("air", util.color("#FFFF7E"), 0)
+aspect("fire", util.color("#FF5A01"), 0)
+aspect("water", util.color("#3CD4FC"), 0)
+aspect("earth", util.color("#56C000"), 0)
+aspect("order", util.color("#D5D4EC"), 0)
+aspect("entropy", util.color("#404040"), 0)
 
 -- TODO mod items
 
 -- compound T1
-aspect("ice", color:hex2rgb("#E1FFFF"), 1, "fire", "entropy")
-aspect("light", color:hex2rgb("#FFF663"), 1, "air", "fire")
-aspect("motion", color:hex2rgb("#CDCCF4"), 1, "air", "order")
-aspect("exchange", color:hex2rgb("#578357"), 1, "order", "entropy")
-aspect("energy", color:hex2rgb("#C0FFFF"), 1, "fire", "order")
-aspect("void", color:hex2rgb("#0D0D0D"), 1, "air", "entropy")
-aspect("poison", color:hex2rgb("#89F000"), 1, "water", "entropy")
-aspect("life", color:hex2rgb("#DE0005"), 1, "water", "earth")
-aspect("crystal", color:hex2rgb("#80FFFF"), 1, "order", "earth")
+aspect("ice", util.color("#E1FFFF"), 1, "fire", "entropy")
+aspect("light", util.color("#FFF663"), 1, "air", "fire")
+aspect("motion", util.color("#CDCCF4"), 1, "air", "order")
+aspect("exchange", util.color("#578357"), 1, "order", "entropy")
+aspect("energy", util.color("#C0FFFF"), 1, "fire", "order")
+aspect("void", util.color("#0D0D0D"), 1, "air", "entropy")
+aspect("poison", util.color("#89F000"), 1, "water", "entropy")
+aspect("life", util.color("#DE0005"), 1, "water", "earth")
+aspect("crystal", util.color("#80FFFF"), 1, "order", "earth")
 
 -- compound T2
-aspect("beast", color:hex2rgb("#9F6409"), 2, "motion", "life")
-aspect("hunger", color:hex2rgb("#9A0305"), 2, "void", "life")
-aspect("plant", color:hex2rgb("#01AC00"), 2, "earth", "life")
-aspect("travel", color:hex2rgb("#E0585B"), 2, "motion", "earth")
-aspect("metal", color:hex2rgb("#B5B5CD"), 2, "earth", "crystal")
-aspect("death", color:hex2rgb("#887788"), 2, "entropy", "life")
-aspect("magic", color:hex2rgb("#9700C0"), 2, "energy", "void")
-aspect("darkness", color:hex2rgb("#222222"), 2, "light", "void")
-aspect("trap", color:hex2rgb("#9A8080"), 2, "motion", "entropy")
-aspect("flight", color:hex2rgb("#E7E7D7"), 2, "air", "motion")
+aspect("beast", util.color("#9F6409"), 2, "motion", "life")
+aspect("hunger", util.color("#9A0305"), 2, "void", "life")
+aspect("plant", util.color("#01AC00"), 2, "earth", "life")
+aspect("travel", util.color("#E0585B"), 2, "motion", "earth")
+aspect("metal", util.color("#B5B5CD"), 2, "earth", "crystal")
+aspect("death", util.color("#887788"), 2, "entropy", "life")
+aspect("magic", util.color("#9700C0"), 2, "energy", "void")
+aspect("darkness", util.color("#222222"), 2, "light", "void")
+aspect("trap", util.color("#9A8080"), 2, "motion", "entropy")
+aspect("flight", util.color("#E7E7D7"), 2, "air", "motion")
 
 -- compound T3
-aspect("alien", color:hex2rgb("#805080"), 3, "darkness", "void")
-aspect("aura", color:hex2rgb("#FFC0FF"), 3, "air", "magic")
-aspect("soul", color:hex2rgb("#3E3E42"), 3, "death", "life")
-aspect("taint", color:hex2rgb("#800080"), 3, "entropy", "magic")
+aspect("alien", util.color("#805080"), 3, "darkness", "void")
+aspect("aura", util.color("#FFC0FF"), 3, "air", "magic")
+aspect("soul", util.color("#3E3E42"), 3, "death", "life")
+aspect("taint", util.color("#800080"), 3, "entropy", "magic")
 
 -- compound T4
-aspect("mind", color:hex2rgb("#FFC2B3"), 4, "fire", "soul")
-aspect("senses", color:hex2rgb("#0FD9FF"), 4, "air", "soul")
+aspect("mind", util.color("#FFC2B3"), 4, "fire", "soul")
+aspect("senses", util.color("#0FD9FF"), 4, "air", "soul")
 
 -- compound T5
-aspect("human", color:hex2rgb("#FFD7C0"), 5, "beast", "mind")
+aspect("human", util.color("#FFD7C0"), 5, "beast", "mind")
 
 -- compound T6
-aspect("tool", color:hex2rgb("#4040EE"), 6, "human", "order")
-aspect("greed", color:hex2rgb("#E6BE44"), 6, "hunger", "human")
-aspect("mine", color:hex2rgb("#DCD2D8"), 6, "human", "earth")
+aspect("tool", util.color("#4040EE"), 6, "human", "order")
+aspect("greed", util.color("#E6BE44"), 6, "hunger", "human")
+aspect("mine", util.color("#DCD2D8"), 6, "human", "earth")
 
 -- compound T7
-aspect("craft", color:hex2rgb("#809D80"), 7, "human", "tool")
-aspect("machine", color:hex2rgb("#8080A0"), 7, "tool", "motion")
-aspect("weapon", color:hex2rgb("#C05050"), 7, "tool", "fire")
-aspect("protection", color:hex2rgb("#00C0C0"), 7, "tool", "earth")
+aspect("craft", util.color("#809D80"), 7, "human", "tool")
+aspect("machine", util.color("#8080A0"), 7, "tool", "motion")
+aspect("weapon", util.color("#C05050"), 7, "tool", "fire")
+aspect("protection", util.color("#00C0C0"), 7, "tool", "earth")
 
 -- assign aspects to items
 

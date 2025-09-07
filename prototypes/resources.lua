@@ -1,6 +1,6 @@
 local resource_autoplace = require("__core__.lualib.resource-autoplace")
 local tile_sounds = require("__base__.prototypes.tile.tile-sounds")
-local color = require("color")
+local util = require("__core__.lualib.util")
 
 -- based on stone prototype
 local function shard(element, color)
@@ -81,9 +81,9 @@ local function shard(element, color)
   })
 end
 
-shard("air", color:hex2rgb("#FFFF7E"))
-shard("fire", color:hex2rgb("#FF5A01"))
-shard("water", color:hex2rgb("#3CD4FC"))
-shard("earth", color:hex2rgb("#56C000"))
-shard("order", color:hex2rgb("#D5D4EC"))
-shard("entropy", color:hex2rgb("#404040"))
+shard("air", util.color("#FFFF7E"))
+shard("fire", util.color("#FF5A01"))
+shard("water", util.color("#3CD4FC"))
+shard("earth", util.color("#56C000"))
+shard("order", util.color("#D5D4EC"))
+shard("entropy", util.color("#404040"))
