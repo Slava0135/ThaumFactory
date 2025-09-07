@@ -1,5 +1,7 @@
 local area = require("area")
 local particle = require("particle")
+local shuffle = require("lib.shuffle")
+local tablext = require("lib.tablext")
 
 local function on_60th_tick()
   local aspect_per_use = 1
@@ -21,7 +23,9 @@ local function on_60th_tick()
           goto next
         end
         local resources = pylon.surface.find_entities_filtered { area = pylon_area, type = "resource" }
-        for _, entity in pairs(resources) do
+        local resources_shuffled = tablext:to_array(resources)
+        shuffle:shuffle_array(resources_shuffled)
+        for _, entity in pairs(resources_shuffled) do
           local minable = prototypes.entity[entity.name].mineable_properties
           local amount = aspect_per_use * resource_use_modifier * minable.mining_time
           if not minable.required_fluid and fluid >= amount then
@@ -34,7 +38,9 @@ local function on_60th_tick()
           end
         end
         local entities = pylon.surface.find_entities_filtered { area = pylon_area }
-        for _, entity in pairs(entities) do
+        local entities_shuffled = tablext:to_array(entities)
+        shuffle:shuffle_array(entities_shuffled)
+        for _, entity in pairs(entities_shuffled) do
           if entity.minable and not entity.unit_number then
             local position = entity.position
             entity.mine { inventory = inventory }

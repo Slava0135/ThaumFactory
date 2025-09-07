@@ -13,17 +13,20 @@ local function random_vector()
 end
 
 --- @param arg {
----   density: unknown,
----   from: unknown,
----   name: unknown,
----   surface: unknown,
----   to: unknown,
----   wide: unknown,
+---   density: number,
+---   from: table,
+---   name: string,
+---   surface: table,
+---   to: table,
+---   wide: boolean,
 --- }
 function particle:trail(arg)
   local vector = math2d.position.subtract(arg.to, arg.from)
   local direction = math2d.position.get_normalised(vector)
   local length = math2d.vector.length(vector)
+  if length == 0 or length ~= length then -- NaN
+    return
+  end
   local particle_position = arg.from
   local offset = math2d.position.divide_scalar(math2d.position.rotate_vector(direction, 90), 4)
   local steps = arg.density * length + 1
