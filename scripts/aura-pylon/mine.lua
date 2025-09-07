@@ -1,15 +1,13 @@
-local constants = require("constants")
-local math2d = require("__core__.lualib.math2d")
+local area = require("area")
 
 local function on_60th_tick()
   local aspect_per_use = 1
   for _, surface in pairs(game.surfaces) do
     for _, pylon in pairs(surface.find_entities_filtered { name = "thaumfactory-aura-pylon" }) do
       if (pylon.get_fluid_count("thaumfactory-aspect-mine") or 0) > aspect_per_use then
-        local storage_entities = surface.find_entities_filtered {
-          area = math2d.bounding_box.create_from_centre(pylon.position, 2 * constants.storage_radius, 2 * constants.storage_radius),
-          type = "container"
-        }
+        local pylon_area = area:pylon(pylon.position)
+        local storage_area = area:storage(pylon.position)
+        local storage_entities = surface.find_entities_filtered { area = storage_area, type = "container" }
         if #storage_entities == 0 then
           return
         end
@@ -17,7 +15,7 @@ local function on_60th_tick()
         if not inventory then
           return
         end
-        local entities = surface.find_entities_filtered { position = pylon.position, radius = constants.radius }
+        local entities = surface.find_entities_filtered { area = pylon_area }
         for _, entity in pairs(entities) do
           if entity.minable and not entity.unit_number then
             if entity.mine { inventory = inventory } then
