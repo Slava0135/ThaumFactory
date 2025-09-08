@@ -19,6 +19,7 @@ local function on_60th_tick()
             entity.burner.remaining_burning_fuel = fuel_value
             pylon.remove_fluid { name = "thaumfactory-aspect-fire", amount = amount }
             particle:smoke_trail { name = "smoke-fast", from = pylon.position, to = entity.position, surface = entity.surface, density = 1 }
+            pylon.surface.play_sound({ path = "thaumfactory-sound-fire", position = entity.position, volume_modifier = 0.2 })
           end
         end
       end

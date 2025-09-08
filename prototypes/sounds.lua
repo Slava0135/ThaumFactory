@@ -4,5 +4,11 @@ data:extend({
     type = "sound",
     category = "game-effect",
     filename = "__thaumfactory__/sounds/magic.ogg",
+  },
+  {
+    name = "thaumfactory-sound-fire",
+    type = "sound",
+    category = "game-effect",
+    filename = "__thaumfactory__/sounds/fire.ogg",
   }
 })
