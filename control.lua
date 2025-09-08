@@ -17,4 +17,5 @@ handler.add_libraries({
   require("scripts.aura-pylon.earth"),
   require("scripts.aura-pylon.craft"),
   require("scripts.aura-pylon.fire"),
+  require("scripts.aura-pylon.energy"),
 })
