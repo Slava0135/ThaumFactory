@@ -6,12 +6,14 @@ local function arcane_stone_brick_recipe(element)
       type = "recipe",
       name = "thaumfactory-arcane-stone-brick-" .. element,
       enabled = true, -- TODO
+      energy_required = 1,
       ingredients =
       {
         { type = "item", name = "stone-brick",                          amount = 1 },
         { type = "item", name = "thaumfactory-" .. element .. "-shard", amount = 1 }
       },
       results = { { type = "item", name = "thaumfactory-arcane-stone-brick", amount = 1 } },
+      allow_productivity = true,
       order = "t-arcane-stone-brick-" .. mod_data.aspects[element].order,
     }
   })
@@ -24,72 +26,118 @@ arcane_stone_brick_recipe("earth")
 arcane_stone_brick_recipe("order")
 arcane_stone_brick_recipe("entropy")
 
+-- not using steel in recipes because it has worse magic properties than iron, very important :)
 data:extend({
   {
     type = "recipe",
     name = "thaumfactory-alchemical-furnace",
+    enabled = true, -- TODO
+    energy_required = 3,
+    -- same ingredients as furnace + some pipes
     ingredients = {
       { type = "item", name = "iron-plate",                      amount = 6 },
       { type = "item", name = "thaumfactory-arcane-stone-brick", amount = 10 },
       { type = "item", name = "pipe",                            amount = 12 }
     },
     results = { { type = "item", name = "thaumfactory-alchemical-furnace", amount = 1 } },
-    enabled = true -- TODO
   },
   {
     type = "recipe",
     name = "thaumfactory-alchemical-centrifuge",
+    category = "thaumfactory-fabricate",
+    enabled = true, -- TODO
+    energy_required = 3,
     ingredients = {
-      -- TODO
-      { type = "item", name = "thaumfactory-arcane-stone-brick", amount = 1 },
+      { type = "item",  name = "iron-plate",                      amount = 24 },
+      { type = "item",  name = "thaumfactory-arcane-stone-brick", amount = 10 },
+      { type = "item",  name = "pipe",                            amount = 12 },
+      { type = "fluid", name = "thaumfactory-aspect-order",       amount = 6 },
+      { type = "fluid", name = "thaumfactory-aspect-water",       amount = 6 },
+      { type = "fluid", name = "thaumfactory-aspect-entropy",     amount = 6 },
     },
     results = { { type = "item", name = "thaumfactory-alchemical-centrifuge", amount = 1 } },
-    enabled = true -- TODO
   },
   {
     type = "recipe",
     name = "thaumfactory-arcane-fabricator",
+    enabled = true, -- TODO
+    energy_required = 0.5,
     ingredients = {
-      -- TODO
-      { type = "item", name = "thaumfactory-arcane-stone-brick", amount = 1 },
+      { type = "item", name = "iron-plate",                      amount = 15 },
+      { type = "item", name = "thaumfactory-arcane-stone-brick", amount = 15 },
+      { type = "item", name = "pipe",                            amount = 24 },
+      { type = "item", name = "iron-gear-wheel",                 amount = 5 },
     },
     results = { { type = "item", name = "thaumfactory-arcane-fabricator", amount = 1 } },
-    enabled = true -- TODO
   },
   {
     type = "recipe",
     name = "thaumfactory-aura-pylon",
+    category = "thaumfactory-fabricate",
+    enabled = true, -- TODO
+    energy_required = 15,
     ingredients = {
-      -- TODO
-      { type = "item", name = "thaumfactory-arcane-stone-brick", amount = 1 },
+      { type = "item",  name = "iron-plate",                      amount = 20 },
+      { type = "item",  name = "thaumfactory-arcane-stone-brick", amount = 10 },
+      { type = "item",  name = "pipe",                            amount = 4 },
+      { type = "item",  name = "iron-stick",                      amount = 10 },
+      { type = "fluid", name = "thaumfactory-aspect-water",       amount = 40 },
+      { type = "fluid", name = "thaumfactory-aspect-exchange",    amount = 40 },
+      { type = "fluid", name = "thaumfactory-aspect-machine",     amount = 40 },
     },
     results = { { type = "item", name = "thaumfactory-aura-pylon", amount = 1 } },
-    enabled = true -- TODO
+  },
+  {
+    type = "recipe",
+    name = "thaumfactory-arcane-lab",
+    enabled = true, -- TODO
+    energy_required = 2,
+    ingredients =
+    {
+      { type = "item", name = "iron-plate",                      amount = 10 },
+      { type = "item", name = "thaumfactory-arcane-stone-brick", amount = 10 },
+      { type = "item", name = "iron-gear-wheel",                 amount = 4 },
+    },
+    results = { { type = "item", name = "thaumfactory-arcane-lab", amount = 1 } },
+  },
+  {
+    type = "recipe",
+    name = "thaumfactory-arcane-stone-wall",
+    enabled = true, -- TODO
+    ingredients =
+    {
+      { type = "item", name = "thaumfactory-arcane-stone-brick", amount = 5 },
+    },
+    results = { { type = "item", name = "thaumfactory-arcane-stone-wall", amount = 1 } },
   },
   {
     type = "recipe",
     name = "thaumfactory-fire-firearm-magazine",
+    enabled = true, -- TODO
+    energy_required = 1,
     ingredients = {
       { type = "item", name = "firearm-magazine",        amount = 1 },
       { type = "item", name = "thaumfactory-fire-shard", amount = 1 },
     },
     results = { { type = "item", name = "thaumfactory-fire-firearm-magazine", amount = 1 } },
-    enabled = true -- TODO
   },
   {
     type = "recipe",
     name = "thaumfactory-air-firearm-magazine",
+    enabled = true, -- TODO
+    energy_required = 1,
     ingredients = {
       { type = "item", name = "firearm-magazine",       amount = 1 },
       { type = "item", name = "thaumfactory-air-shard", amount = 1 },
     },
     results = { { type = "item", name = "thaumfactory-air-firearm-magazine", amount = 1 } },
-    enabled = true -- TODO
   },
   {
     type = "recipe",
     name = "thaumfactory-alumentum",
     category = "thaumfactory-fabricate",
+    enabled = true, -- TODO
+    energy_required = 1,
     ingredients = {
       { type = "item",  name = "coal",                        amount = 1 },
       { type = "fluid", name = "thaumfactory-aspect-fire",    amount = 3 },
@@ -97,58 +145,61 @@ data:extend({
       { type = "fluid", name = "thaumfactory-aspect-energy",  amount = 3 },
     },
     results = { { type = "item", name = "thaumfactory-alumentum", amount = 1 } },
-    enabled = true -- TODO
   },
   {
     type = "recipe",
     name = "thaumfactory-native-iron-cluster",
     category = "thaumfactory-fabricate",
+    enabled = true, -- TODO
+    energy_required = 1,
     ingredients = {
       { type = "item",  name = "iron-ore",                  amount = 1 },
       { type = "fluid", name = "thaumfactory-aspect-metal", amount = 1 },
       { type = "fluid", name = "thaumfactory-aspect-order", amount = 1 },
     },
     results = { { type = "item", name = "thaumfactory-native-iron-cluster", amount = 1 } },
-    enabled = true -- TODO
   },
   {
     type = "recipe",
     name = "thaumfactory-native-iron-cluster-smelt",
     category = "smelting",
+    enabled = true, -- TODO
     auto_recycle = false,
     energy_required = 3.2,
     ingredients = { { type = "item", name = "thaumfactory-native-iron-cluster", amount = 1 } },
     results = { { type = "item", name = "iron-plate", amount = 2 } },
     allow_productivity = true,
-    enabled = true -- TODO
   },
   {
     type = "recipe",
     name = "thaumfactory-native-copper-cluster",
     category = "thaumfactory-fabricate",
+    enabled = true, -- TODO
+    energy_required = 1,
     ingredients = {
       { type = "item",  name = "copper-ore",                amount = 1 },
       { type = "fluid", name = "thaumfactory-aspect-metal", amount = 1 },
       { type = "fluid", name = "thaumfactory-aspect-order", amount = 1 },
     },
     results = { { type = "item", name = "thaumfactory-native-copper-cluster", amount = 1 } },
-    enabled = true -- TODO
   },
   {
     type = "recipe",
     name = "thaumfactory-native-copper-cluster-smelt",
     category = "smelting",
+    enabled = true, -- TODO
     auto_recycle = false,
     energy_required = 3.2,
     ingredients = { { type = "item", name = "thaumfactory-native-copper-cluster", amount = 1 } },
     results = { { type = "item", name = "copper-plate", amount = 2 } },
     allow_productivity = true,
-    enabled = true -- TODO
   },
   {
     type = "recipe",
     name = "thaumfactory-native-uranium-cluster",
     category = "thaumfactory-fabricate",
+    enabled = true, -- TODO
+    energy_required = 1,
     ingredients = {
       { type = "item",  name = "uranium-ore",                amount = 1 },
       { type = "fluid", name = "thaumfactory-aspect-energy", amount = 3 },
@@ -156,11 +207,11 @@ data:extend({
       { type = "fluid", name = "thaumfactory-aspect-order",  amount = 1 },
     },
     results = { { type = "item", name = "thaumfactory-native-uranium-cluster", amount = 1 } },
-    enabled = true -- TODO
   },
   {
     type = "recipe",
     name = "thaumfactory-native-uranium-processing",
+    enabled = true, -- TODO
     energy_required = 12,
     auto_recycle = false,
     category = "centrifuging",
@@ -184,117 +235,109 @@ data:extend({
       }
     },
     allow_productivity = true,
-    enabled = true -- TODO
-  },
-  {
-    type = "recipe",
-    name = "thaumfactory-arcane-lab",
-    energy_required = 2,
-    ingredients =
-    {
-      -- TODO
-      { type = "item", name = "thaumfactory-arcane-stone-brick", amount = 1 },
-    },
-    results = { { type = "item", name = "thaumfactory-arcane-lab", amount = 1 } },
-    enabled = true
-  },
-  {
-    type = "recipe",
-    name = "thaumfactory-arcane-stone-wall",
-    ingredients =
-    {
-      { type = "item", name = "thaumfactory-arcane-stone-brick", amount = 5 },
-    },
-    results = { { type = "item", name = "thaumfactory-arcane-stone-wall", amount = 1 } },
-    -- TODO
-    enabled = true
   },
   {
     type = "recipe",
     name = "thaumfactory-fire-rune-stone",
+    category = "thaumfactory-fabricate",
+    enabled = true, -- TODO
+    energy_required = 60,
     ingredients =
     {
-      -- TODO
+      { type = "item",  name = "thaumfactory-arcane-stone-brick", amount = 1 },
+      { type = "fluid", name = "thaumfactory-aspect-fire",        amount = 720 },
     },
     results = { { type = "item", name = "thaumfactory-fire-rune-stone", amount = 1 } },
-    -- TODO
-    enabled = true
   },
   {
     type = "recipe",
     name = "thaumfactory-life-rune-stone",
+    category = "thaumfactory-fabricate",
+    enabled = true, -- TODO
+    energy_required = 60,
     ingredients =
     {
-      -- TODO
+      { type = "item",  name = "thaumfactory-arcane-stone-brick", amount = 1 },
+      { type = "fluid", name = "thaumfactory-aspect-life",        amount = 720 },
     },
     results = { { type = "item", name = "thaumfactory-life-rune-stone", amount = 1 } },
-    -- TODO
-    enabled = true
   },
   {
     type = "recipe",
     name = "thaumfactory-motion-rune-stone",
+    category = "thaumfactory-fabricate",
+    enabled = true, -- TODO
+    energy_required = 60,
     ingredients =
     {
-      -- TODO
+      { type = "item",  name = "thaumfactory-arcane-stone-brick", amount = 1 },
+      { type = "fluid", name = "thaumfactory-aspect-motion",      amount = 720 },
     },
     results = { { type = "item", name = "thaumfactory-motion-rune-stone", amount = 1 } },
-    -- TODO
-    enabled = true
   },
   {
     type = "recipe",
     name = "thaumfactory-order-rune-stone",
+    category = "thaumfactory-fabricate",
+    enabled = true, -- TODO
+    energy_required = 60,
     ingredients =
     {
-      -- TODO
+      { type = "item",  name = "thaumfactory-arcane-stone-brick", amount = 1 },
+      { type = "fluid", name = "thaumfactory-aspect-order",       amount = 720 },
     },
     results = { { type = "item", name = "thaumfactory-order-rune-stone", amount = 1 } },
-    -- TODO
-    enabled = true
   },
   {
     type = "recipe",
     name = "thaumfactory-light-rune-stone",
+    category = "thaumfactory-fabricate",
+    enabled = true, -- TODO
+    energy_required = 60,
     ingredients =
     {
-      -- TODO
+      { type = "item",  name = "thaumfactory-arcane-stone-brick", amount = 1 },
+      { type = "fluid", name = "thaumfactory-aspect-light",       amount = 720 },
     },
     results = { { type = "item", name = "thaumfactory-light-rune-stone", amount = 1 } },
-    -- TODO
-    enabled = true
   },
   {
     type = "recipe",
     name = "thaumfactory-mine-rune-stone",
+    category = "thaumfactory-fabricate",
+    enabled = true, -- TODO
+    energy_required = 60,
     ingredients =
     {
-      -- TODO
+      { type = "item",  name = "thaumfactory-arcane-stone-brick", amount = 1 },
+      { type = "fluid", name = "thaumfactory-aspect-mine",        amount = 720 },
     },
     results = { { type = "item", name = "thaumfactory-mine-rune-stone", amount = 1 } },
-    -- TODO
-    enabled = true
   },
   {
     type = "recipe",
     name = "thaumfactory-tool-rune-stone",
+    category = "thaumfactory-fabricate",
+    enabled = true, -- TODO
+    energy_required = 60,
     ingredients =
     {
-      -- TODO
+      { type = "item",  name = "thaumfactory-arcane-stone-brick", amount = 1 },
+      { type = "fluid", name = "thaumfactory-aspect-tool",        amount = 720 },
     },
     results = { { type = "item", name = "thaumfactory-tool-rune-stone", amount = 1 } },
-    -- TODO
-    enabled = true
   },
   {
     type = "recipe",
     name = "thaumfactory-craft-rune-stone",
+    category = "thaumfactory-fabricate",
+    enabled = true, -- TODO
+    energy_required = 60,
     ingredients =
     {
-      -- TODO
+      { type = "item",  name = "thaumfactory-arcane-stone-brick", amount = 1 },
+      { type = "fluid", name = "thaumfactory-aspect-craft",       amount = 720 },
     },
     results = { { type = "item", name = "thaumfactory-craft-rune-stone", amount = 1 } },
-    -- TODO
-    enabled = true
   },
 })

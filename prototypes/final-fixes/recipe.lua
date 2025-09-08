@@ -17,6 +17,7 @@ for name, a in pairs(mod_data.item_aspects) do
       type = "recipe",
       name = "thaumfactory-smelt-" .. name,
       category = "thaumfactory-alchemistry-smelt",
+      -- TODO
       enabled = true,
       energy_required = 1,
       ingredients =
@@ -41,9 +42,12 @@ for element, a in pairs(mod_data.aspects) do
       {
         type = "recipe",
         name = "thaumfactory-break-aspect-" .. element,
+        icon = fluid.icon,
+        icons = fluid.icons,
         category = "thaumfactory-alchemistry-break",
-        enabled = true,
-        energy_required = 1,
+        subgroup = "thaumfactory-recipes",
+        enabled = true, -- TODO
+        energy_required = 2,
         ingredients =
         {
           { type = "fluid", name = "thaumfactory-aspect-" .. element, amount = 2 },
@@ -54,12 +58,9 @@ for element, a in pairs(mod_data.aspects) do
           { type = "fluid", name = "thaumfactory-aspect-" .. a.component2, amount = 1 },
         },
         allow_productivity = false,
-        icon = fluid.icon,
-        icons = fluid.icons,
-        subgroup = "thaumfactory-recipes",
-        order = "t-break-" .. a.tier .. "-" .. a.order,
         allow_decomposition = false,
         hide_from_player_crafting = true,
+        order = "t-break-" .. a.tier .. "-" .. a.order,
       }
     })
   end
@@ -69,8 +70,11 @@ for element, a in pairs(mod_data.aspects) do
     {
       type = "recipe",
       name = crystal_name,
+      icon = crystal.icon,
+      icons = crystal.icons,
       category = "thaumfactory-fabricate",
-      enabled = true,
+      subgroup = "thaumfactory-recipes",
+      enabled = true, -- TODO
       energy_required = 1,
       ingredients =
       {
@@ -81,12 +85,9 @@ for element, a in pairs(mod_data.aspects) do
         { type = "item", name = crystal_name, amount = 1 },
       },
       allow_productivity = false,
-      icon = crystal.icon,
-      icons = crystal.icons,
-      subgroup = "thaumfactory-recipes",
-      order = "t-break-" .. a.tier .. "-" .. a.order,
       allow_decomposition = false,
       hide_from_player_crafting = true,
+      order = "t-break-" .. a.tier .. "-" .. a.order,
     }
   })
 end
