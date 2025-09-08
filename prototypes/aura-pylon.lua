@@ -30,7 +30,7 @@ data:extend({
     icon_draw_specification = { scale = 1.5, shift = { 0, -0.3 } },
     fluid_box =
     {
-      volume = 25000,
+      volume = 5000,
       pipe_covers = pipecoverspictures(),
       pipe_connections =
       {
