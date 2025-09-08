@@ -19,6 +19,7 @@ local function on_60th_tick()
             local amount = delta_j * aspect_per_j
             pylon.remove_fluid { name = "thaumfactory-aspect-energy", amount = amount }
             particle:trail { from = pylon.position, to = entity.position, name = "pole-spark-particle", surface = pylon.surface, density = 3, wide = true }
+            pylon.surface.play_sound({ path = "thaumfactory-sound-zap", position = entity.position, volume_modifier = 0.03 })
           end
         end
       end
