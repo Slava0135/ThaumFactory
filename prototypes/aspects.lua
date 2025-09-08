@@ -62,8 +62,6 @@ aspect("earth", util.color("#56C000"), 0)
 aspect("order", util.color("#D5D4EC"), 0)
 aspect("entropy", util.color("#404040"), 0)
 
--- TODO mod items
-
 -- compound T1
 aspect("ice", util.color("#E1FFFF"), 1, "fire", "entropy")
 aspect("light", util.color("#FFF663"), 1, "air", "fire")
@@ -126,13 +124,41 @@ aspect("protection", util.color("#00C0C0"), 7, "tool", "earth")
 -- 720 = 1 * 2 * 3 * 4 * 5 * 6 * 7
 -- ...
 
--- shards
+-- mod resources
 item_aspects["thaumfactory-air-shard"] = { air = 3, magic = 1, crystal = 1 }
 item_aspects["thaumfactory-fire-shard"] = { fire = 3, magic = 1, crystal = 1 }
 item_aspects["thaumfactory-water-shard"] = { water = 3, magic = 1, crystal = 1 }
 item_aspects["thaumfactory-earth-shard"] = { earth = 3, magic = 1, crystal = 1 }
 item_aspects["thaumfactory-order-shard"] = { order = 3, magic = 1, crystal = 1 }
 item_aspects["thaumfactory-entropy-shard"] = { entropy = 3, magic = 1, crystal = 1 }
+
+item_aspects["thaumfactory-native-iron-cluster"] = { metal = 2, earth = 2 }
+item_aspects["thaumfactory-native-copper-cluster"] = { metal = 2, earth = 2, exchange = 2 }
+item_aspects["thaumfactory-native-uranium-cluster"] = { earth = 2, energy = 6, light = 2 }
+
+-- mod components
+item_aspects["thaumfactory-alumentum"] = { fire = 3, entropy = 3, energy = 3 }
+item_aspects["thaumfactory-arcane-stone-brick"] = { earth = 1, fire = 1, magic = 1 }
+
+-- mod buildings
+item_aspects["thaumfactory-alchemical-furnace"] = { fire = 6, earth = 6, magic = 6, water = 3 }
+item_aspects["thaumfactory-alchemical-centrifuge"] = { order = 6, water = 12, entropy = 6, magic = 3 }
+item_aspects["thaumfactory-arcane-fabricator"] = { machine = 6, craft = 6, magic = 12, water = 3 }
+item_aspects["thaumfactory-aura-pylon"] = { water = 40, exchange = 24, machine = 24, magic = 6 }
+item_aspects["thaumfactory-arcane-lab"] = { mind = 3, machine = 3, light = 1, magic = 3 }
+item_aspects["thaumfactory-arcane-stone-wall"] = { protection = 3, earth = 3, fire = 3, magic = 3 }
+
+-- mod items
+item_aspects["thaumfactory-fire-firearm-magazine"] = { metal = 1, weapon = 1, fire = 1, magic = 1 }
+item_aspects["thaumfactory-air-firearm-magazine"] = { metal = 1, weapon = 1, air = 1, magic = 1 }
+item_aspects["thaumfactory-fire-rune-stone"] = { magic = 1, fire = 40 }
+item_aspects["thaumfactory-life-rune-stone"] = { magic = 1, life = 40 }
+item_aspects["thaumfactory-motion-rune-stone"] = { magic = 1, motion = 40 }
+item_aspects["thaumfactory-order-rune-stone"] = { magic = 1, order = 40 }
+item_aspects["thaumfactory-light-rune-stone"] = { magic = 1, light = 40 }
+item_aspects["thaumfactory-mine-rune-stone"] = { magic = 1, mine = 40 }
+item_aspects["thaumfactory-tool-rune-stone"] = { magic = 1, tool = 40 }
+item_aspects["thaumfactory-craft-rune-stone"] = { magic = 1, craft = 40 }
 
 -- resources
 item_aspects["wood"] = { plant = 6 }
@@ -157,8 +183,7 @@ item_aspects["explosives"] = { entropy = 6, fire = 6 }
 item_aspects["iron-gear-wheel"] = { metal = 3 }
 item_aspects["iron-stick"] = { metal = 1 }
 item_aspects["copper-cable"] = { metal = 1, exchange = 1 }
-item_aspects["copper-cable"] = { metal = 1, exchange = 1 }
-item_aspects["barrel"] = { metal = 1, void = 1 }
+item_aspects["barrel"] = { metal = 1, water = 1 }
 item_aspects["electronic-circuit"] = { machine = 1, order = 1, exchange = 1 }
 item_aspects["advanced-circuit"] = { machine = 2, order = 2, exchange = 2 }
 item_aspects["processing-unit"] = { machine = 3, order = 3, exchange = 3 }
@@ -188,7 +213,7 @@ item_aspects["space-science-pack"] = { mind = 90, senses = 90, travel = 90, dark
 item_aspects["wooden-chest"] = { plant = 6, void = 3 }
 item_aspects["iron-chest"] = { metal = 6, void = 6 }
 item_aspects["steel-chest"] = { metal = 6, order = 6, void = 12 }
-item_aspects["storage-tank"] = { metal = 6, order = 6, void = 12 }
+item_aspects["storage-tank"] = { metal = 6, order = 6, water = 12 }
 
 -- belts
 item_aspects["transport-belt"] = { machine = 1, motion = 3 }
@@ -215,9 +240,9 @@ item_aspects["big-electric-pole"] = { metal = 6, order = 2, exchange = 6 }
 item_aspects["substation"] = { metal = 12, order = 3, exchange = 12 }
 
 -- pipes
-item_aspects["pipe"] = { metal = 1, void = 1, motion = 1 }
-item_aspects["pipe-to-ground"] = { metal = 1, void = 1, motion = 1, earth = 1, darkness = 1 }
-item_aspects["pump"] = { machine = 3, order = 3, motion = 3 }
+item_aspects["pipe"] = { metal = 1, motion = 1, water = 1 }
+item_aspects["pipe-to-ground"] = { metal = 1, motion = 1, earth = 1, darkness = 1, water = 1 }
+item_aspects["pump"] = { machine = 3, order = 3, motion = 3, water = 3 }
 
 -- rails
 item_aspects["rail"] = { metal = 1, earth = 1, order = 1 }
@@ -226,7 +251,7 @@ item_aspects["rail-signal"] = { metal = 1, senses = 1 }
 item_aspects["rail-chain-signal"] = { metal = 1, senses = 1 }
 item_aspects["locomotive"] = { machine = 24, order = 24, travel = 40 }
 item_aspects["cargo-wagon"] = { machine = 12, order = 12, void = 24, travel = 40 }
-item_aspects["fluid-wagon"] = { machine = 12, order = 12, void = 24, travel = 40 }
+item_aspects["fluid-wagon"] = { machine = 12, order = 12, water = 24, travel = 40 }
 item_aspects["artillery-wagon"] = { machine = 90, order = 40, weapon = 90, travel = 40 }
 
 -- transport
@@ -267,20 +292,20 @@ item_aspects["cliff-explosives"] = { entropy = 24, fire = 24 }
 item_aspects["repair-pack"] = { metal = 3, craft = 3, tool = 3 }
 
 -- electricity
-item_aspects["boiler"] = { fire = 3, metal = 3 }
-item_aspects["steam-engine"] = { machine = 6, motion = 3, energy = 3, exchange = 1 }
+item_aspects["boiler"] = { fire = 3, metal = 3, water = 1 }
+item_aspects["steam-engine"] = { machine = 6, motion = 3, energy = 3, exchange = 1, water = 1 }
 item_aspects["solar-panel"] = { metal = 3, energy = 3, exchange = 6, order = 1 }
 item_aspects["accumulator"] = { energy = 24, exchange = 24 }
 item_aspects["nuclear-reactor"] = { energy = 720, exchange = 720, machine = 720, entropy = 720, order = 720 }
 item_aspects["heat-pipe"] = { metal = 6, exchange = 6, order = 3 }
 item_aspects["heat-exchanger"] = { metal = 24, exchange = 24, order = 6 }
-item_aspects["steam-turbine"] = { machine = 40, motion = 24, energy = 24, exchange = 6 }
+item_aspects["steam-turbine"] = { machine = 40, motion = 24, energy = 24, exchange = 6, water = 12 }
 
 -- excavation
 item_aspects["burner-mining-drill"] = { fire = 3, metal = 3, mine = 3 }
 item_aspects["electric-mining-drill"] = { machine = 6, mine = 6 }
-item_aspects["offshore-pump"] = { machine = 3, motion = 3 }
-item_aspects["pumpjack"] = { machine = 6, mine = 6, motion = 3, order = 1 }
+item_aspects["offshore-pump"] = { machine = 3, motion = 3, water = 1 }
+item_aspects["pumpjack"] = { machine = 6, mine = 6, motion = 3, order = 1, water = 1 }
 
 -- furnaces
 item_aspects["stone-furnace"] = { fire = 3, earth = 3 }
@@ -291,8 +316,8 @@ item_aspects["electric-furnace"] = { fire = 12, earth = 6, order = 3 }
 item_aspects["assembling-machine-1"] = { machine = 3, craft = 3 }
 item_aspects["assembling-machine-2"] = { machine = 6, craft = 6, order = 1 }
 item_aspects["assembling-machine-3"] = { machine = 12, craft = 12, order = 3 }
-item_aspects["oil-refinery"] = { machine = 6, fire = 6, order = 3 }
-item_aspects["chemical-plant"] = { machine = 6, craft = 6, order = 3 }
+item_aspects["oil-refinery"] = { machine = 6, fire = 6, order = 3, water = 1 }
+item_aspects["chemical-plant"] = { machine = 6, craft = 6, order = 3, water = 1 }
 item_aspects["centrifuge"] = { machine = 40, exchange = 24, order = 24, entropy = 24 }
 item_aspects["lab"] = { mind = 3, machine = 3, light = 1 }
 
@@ -372,5 +397,5 @@ item_aspects["land-mine"] = { entropy = 6, fire = 6, earth = 1 }
 -- turrets
 item_aspects["gun-turret"] = { machine = 12, weapon = 12 }
 item_aspects["laser-turret"] = { machine = 24, weapon = 24, energy = 24 }
-item_aspects["flamethrower-turret"] = { machine = 24, weapon = 24, fire = 24, order = 6, void = 3 }
+item_aspects["flamethrower-turret"] = { machine = 24, weapon = 24, fire = 24, order = 6, water = 3 }
 item_aspects["artillery-turret"] = { machine = 90, weapon = 90, order = 24 }
