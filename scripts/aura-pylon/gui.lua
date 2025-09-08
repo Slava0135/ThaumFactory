@@ -4,7 +4,7 @@ local area = require("area")
 local function on_tick()
   for _, unit_number in pairs(storage.aura_pylons) do
     local pylon = game.get_entity_by_unit_number(unit_number)
-    if pylon and pylon.valid then
+    if pylon and pylon.valid and storage.selected_aura_pylons[unit_number] then
       local pylon_area = area:pylon(pylon.position)
       local storage_area = area:storage(pylon.position)
       rendering.draw_rectangle {
@@ -55,10 +55,25 @@ local function on_tick()
   end
 end
 
+local function on_selected_entity_changed(event)
+  local player = game.get_player(event.player_index)
+  if player.selected and player.selected.name == "thaumfactory-aura-pylon" then
+    storage.selected_aura_pylons[player.selected.unit_number] = true
+  end
+  if event.last_entity and event.last_entity.unit_number then
+    storage.selected_aura_pylons[event.last_entity.unit_number] = nil
+  end
+end
+
 local pylon_gui = {}
 
 pylon_gui.events = {
-  [defines.events.on_tick] = on_tick
+  [defines.events.on_tick] = on_tick,
+  [defines.events.on_selected_entity_changed] = on_selected_entity_changed,
 }
+
+pylon_gui.on_init = function()
+  storage.selected_aura_pylons = {}
+end
 
 return pylon_gui
