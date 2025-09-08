@@ -62,4 +62,42 @@ function particle:trail(arg)
   end
 end
 
+--- @param arg {
+---   density: number,
+---   from: table,
+---   name: string,
+---   surface: table,
+---   to: table,
+---   wide: boolean,
+--- }
+function particle:smoke_trail(arg)
+  local vector = math2d.position.subtract(arg.to, arg.from)
+  local direction = math2d.position.get_normalised(vector)
+  local length = math2d.vector.length(vector)
+  if length == 0 or length ~= length then -- NaN
+    return
+  end
+  local particle_position = arg.from
+  local offset = math2d.position.divide_scalar(math2d.position.rotate_vector(direction, 90), 4)
+  local steps = arg.density * length + 1
+  for _ = 0, steps do
+    arg.surface.create_trivial_smoke {
+      name = arg.name,
+      position = math2d.position.add(particle_position, random_vector()),
+    }
+    if arg.wide then
+      arg.surface.create_trivial_smoke {
+        name = arg.name,
+        position = math2d.position.add(math2d.position.add(particle_position, offset), random_vector()),
+      }
+      arg.surface.create_trivial_smoke {
+        name = arg.name,
+        position = math2d.position.add(math2d.position.add(particle_position, math2d.position.multiply_scalar(offset, -1)), random_vector()),
+      }
+    end
+    particle_position = math2d.position.add(particle_position,
+      math2d.position.multiply_scalar(direction, 1 / arg.density))
+  end
+end
+
 return particle
