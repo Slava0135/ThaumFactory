@@ -1,7 +1,7 @@
 local STUB = "__base__/graphics/technology/automation-science-pack.png"
 
-local function arcane_stone_brick_tech(element)
-  local tech = "thaumfactory-arcane-stone-brick-" .. element
+local function element_tech(element)
+  local tech = "thaumfactory-aspect-" .. element
   data:extend({
     {
       type = "technology",
@@ -25,12 +25,12 @@ local function arcane_stone_brick_tech(element)
   return tech
 end
 
-local air_tech = arcane_stone_brick_tech("air")
-local fire_tech = arcane_stone_brick_tech("fire")
-local water_tech = arcane_stone_brick_tech("water")
-local earth_tech = arcane_stone_brick_tech("earth")
-local order_tech = arcane_stone_brick_tech("order")
-local entropy_tech = arcane_stone_brick_tech("entropy")
+local air_tech = element_tech("air")
+local fire_tech = element_tech("fire")
+local water_tech = element_tech("water")
+local earth_tech = element_tech("earth")
+local order_tech = element_tech("order")
+local entropy_tech = element_tech("entropy")
 
 data:extend({
   {
