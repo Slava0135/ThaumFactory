@@ -180,6 +180,90 @@ data:extend({
   },
   {
     type = "technology",
+    name = "thaumfactory-aura-pylon-fire",
+    icon = STUB,
+    icon_size = 256,
+    effects = {},
+    prerequisites = { "thaumfactory-aura-pylon" },
+    unit =
+    {
+      count = 1,
+      ingredients = {},
+      time = 1,
+    },
+  },
+  {
+    type = "technology",
+    name = "thaumfactory-aura-pylon-craft",
+    icon = STUB,
+    icon_size = 256,
+    effects = {},
+    prerequisites = { "thaumfactory-aura-pylon" },
+    unit =
+    {
+      count = 1,
+      ingredients = {},
+      time = 1,
+    },
+  },
+  {
+    type = "technology",
+    name = "thaumfactory-aura-pylon-plant",
+    icon = STUB,
+    icon_size = 256,
+    effects = {},
+    prerequisites = { "thaumfactory-aura-pylon" },
+    unit =
+    {
+      count = 1,
+      ingredients = {},
+      time = 1,
+    },
+  },
+  {
+    type = "technology",
+    name = "thaumfactory-aura-pylon-energy",
+    icon = STUB,
+    icon_size = 256,
+    effects = {},
+    prerequisites = { "thaumfactory-aura-pylon" },
+    unit =
+    {
+      count = 1,
+      ingredients = {},
+      time = 1,
+    },
+  },
+  {
+    type = "technology",
+    name = "thaumfactory-aura-pylon-mine",
+    icon = STUB,
+    icon_size = 256,
+    effects = {},
+    prerequisites = { "thaumfactory-aura-pylon" },
+    unit =
+    {
+      count = 1,
+      ingredients = {},
+      time = 1,
+    },
+  },
+  {
+    type = "technology",
+    name = "thaumfactory-aura-pylon-earth",
+    icon = STUB,
+    icon_size = 256,
+    effects = {},
+    prerequisites = { "thaumfactory-aura-pylon" },
+    unit =
+    {
+      count = 1,
+      ingredients = {},
+      time = 1,
+    },
+  },
+  {
+    type = "technology",
     name = "thaumfactory-arcane-stone-wall",
     icon = STUB,
     icon_size = 256,
