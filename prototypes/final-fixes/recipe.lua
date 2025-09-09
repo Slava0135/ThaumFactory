@@ -17,7 +17,6 @@ for name, a in pairs(mod_data.item_aspects) do
       type = "recipe",
       name = "thaumfactory-smelt-" .. name,
       category = "thaumfactory-alchemistry-smelt",
-      -- TODO
       enabled = true,
       energy_required = 1,
       ingredients =
@@ -46,7 +45,7 @@ for element, a in pairs(mod_data.aspects) do
         icons = fluid.icons,
         category = "thaumfactory-alchemistry-break",
         subgroup = "thaumfactory-recipes",
-        enabled = true, -- TODO
+        enabled = true,
         energy_required = 2,
         ingredients =
         {
@@ -74,7 +73,6 @@ for element, a in pairs(mod_data.aspects) do
       icons = crystal.icons,
       category = "thaumfactory-fabricate",
       subgroup = "thaumfactory-recipes",
-      enabled = true, -- TODO
       energy_required = 1,
       ingredients =
       {

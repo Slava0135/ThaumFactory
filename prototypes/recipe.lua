@@ -224,7 +224,6 @@ data:extend({
     type = "recipe",
     name = "thaumfactory-fire-rune-stone",
     category = "thaumfactory-fabricate",
-    enabled = true, -- TODO
     energy_required = 60,
     ingredients =
     {
@@ -237,7 +236,6 @@ data:extend({
     type = "recipe",
     name = "thaumfactory-life-rune-stone",
     category = "thaumfactory-fabricate",
-    enabled = true, -- TODO
     energy_required = 60,
     ingredients =
     {
@@ -250,7 +248,6 @@ data:extend({
     type = "recipe",
     name = "thaumfactory-motion-rune-stone",
     category = "thaumfactory-fabricate",
-    enabled = true, -- TODO
     energy_required = 60,
     ingredients =
     {
@@ -263,7 +260,6 @@ data:extend({
     type = "recipe",
     name = "thaumfactory-order-rune-stone",
     category = "thaumfactory-fabricate",
-    enabled = true, -- TODO
     energy_required = 60,
     ingredients =
     {
@@ -276,7 +272,6 @@ data:extend({
     type = "recipe",
     name = "thaumfactory-light-rune-stone",
     category = "thaumfactory-fabricate",
-    enabled = true, -- TODO
     energy_required = 60,
     ingredients =
     {
@@ -289,7 +284,6 @@ data:extend({
     type = "recipe",
     name = "thaumfactory-mine-rune-stone",
     category = "thaumfactory-fabricate",
-    enabled = true, -- TODO
     energy_required = 60,
     ingredients =
     {
@@ -302,7 +296,6 @@ data:extend({
     type = "recipe",
     name = "thaumfactory-tool-rune-stone",
     category = "thaumfactory-fabricate",
-    enabled = true, -- TODO
     energy_required = 60,
     ingredients =
     {
@@ -315,7 +308,6 @@ data:extend({
     type = "recipe",
     name = "thaumfactory-craft-rune-stone",
     category = "thaumfactory-fabricate",
-    enabled = true, -- TODO
     energy_required = 60,
     ingredients =
     {

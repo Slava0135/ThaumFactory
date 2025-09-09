@@ -83,6 +83,28 @@ data:extend({
   },
   {
     type = "technology",
+    name = "thaumfactory-crystallization",
+    icon = STUB,
+    icon_size = 256,
+    effects = {}, -- final-fixes
+    prerequisites = { "thaumfactory-arcane-fabricator", "thaumfactory-alchemical-furnace" },
+    unit =
+    {
+      count = 120,
+      ingredients =
+      {
+        { "thaumfactory-air-shard",     1 },
+        { "thaumfactory-fire-shard",    1 },
+        { "thaumfactory-water-shard",   1 },
+        { "thaumfactory-earth-shard",   1 },
+        { "thaumfactory-entropy-shard", 1 },
+        { "thaumfactory-order-shard",   1 },
+      },
+      time = 5
+    },
+  },
+  {
+    type = "technology",
     name = "thaumfactory-alchemical-furnace",
     icon = STUB,
     icon_size = 256,
@@ -118,7 +140,7 @@ data:extend({
         recipe = "thaumfactory-alchemical-centrifuge"
       },
     },
-    prerequisites = { "thaumfactory-arcane-fabricator", "thaumfactory-alchemical-furnace" },
+    prerequisites = { "thaumfactory-crystallization" },
     unit =
     {
       count = 720,
@@ -143,7 +165,7 @@ data:extend({
         recipe = "thaumfactory-aura-pylon"
       },
     },
-    prerequisites = { "thaumfactory-alchemical-centrifuge" },
+    prerequisites = { "thaumfactory-crystallization" },
     unit =
     {
       count = 1680,
@@ -242,7 +264,7 @@ data:extend({
         recipe = "thaumfactory-alumentum"
       },
     },
-    prerequisites = { "thaumfactory-arcane-fabricator" },
+    prerequisites = { "thaumfactory-crystallization" },
     unit =
     {
       count = 720,
@@ -271,7 +293,7 @@ data:extend({
         recipe = "thaumfactory-native-iron-cluster-smelt"
       },
     },
-    prerequisites = { "thaumfactory-arcane-fabricator" },
+    prerequisites = { "thaumfactory-crystallization" },
     unit =
     {
       count = 720,
@@ -299,7 +321,7 @@ data:extend({
         recipe = "thaumfactory-native-copper-cluster-smelt"
       },
     },
-    prerequisites = { "thaumfactory-arcane-fabricator" },
+    prerequisites = { "thaumfactory-crystallization" },
     unit =
     {
       count = 720,
@@ -327,7 +349,7 @@ data:extend({
         recipe = "thaumfactory-native-uranium-processing"
       },
     },
-    prerequisites = { "thaumfactory-arcane-fabricator", "uranium-processing" },
+    prerequisites = { "thaumfactory-crystallization", "uranium-processing" },
     unit =
     {
       count = 1680,
@@ -336,6 +358,207 @@ data:extend({
         { "thaumfactory-energy-crystal", 3 },
         { "thaumfactory-light-crystal",  1 },
         { "thaumfactory-order-crystal",  1 },
+      },
+      time = 5
+    },
+  },
+  {
+    type = "technology",
+    name = "thaumfactory-runes",
+    icon = STUB,
+    icon_size = 256,
+    effects = {},
+    prerequisites = { "thaumfactory-crystallization" },
+    unit =
+    {
+      count = 720,
+      ingredients =
+      {
+        { "thaumfactory-magic-crystal", 1 },
+      },
+      time = 5
+    },
+  },
+  {
+    type = "technology",
+    name = "thaumfactory-fire-rune-stone",
+    icon = STUB,
+    icon_size = 256,
+    effects =
+    {
+      {
+        type = "unlock-recipe",
+        recipe = "thaumfactory-fire-rune-stone"
+      },
+    },
+    prerequisites = { "thaumfactory-runes" },
+    unit =
+    {
+      count = 5040,
+      ingredients =
+      {
+        { "thaumfactory-fire-crystal", 1 },
+      },
+      time = 5
+    },
+  },
+  {
+    type = "technology",
+    name = "thaumfactory-life-rune-stone",
+    icon = STUB,
+    icon_size = 256,
+    effects =
+    {
+      {
+        type = "unlock-recipe",
+        recipe = "thaumfactory-life-rune-stone"
+      },
+    },
+    prerequisites = { "thaumfactory-runes" },
+    unit =
+    {
+      count = 5040,
+      ingredients =
+      {
+        { "thaumfactory-life-crystal", 1 },
+      },
+      time = 5
+    },
+  },
+  {
+    type = "technology",
+    name = "thaumfactory-motion-rune-stone",
+    icon = STUB,
+    icon_size = 256,
+    effects =
+    {
+      {
+        type = "unlock-recipe",
+        recipe = "thaumfactory-motion-rune-stone"
+      },
+    },
+    prerequisites = { "thaumfactory-runes" },
+    unit =
+    {
+      count = 5040,
+      ingredients =
+      {
+        { "thaumfactory-motion-crystal", 1 },
+      },
+      time = 5
+    },
+  },
+  {
+    type = "technology",
+    name = "thaumfactory-order-rune-stone",
+    icon = STUB,
+    icon_size = 256,
+    effects =
+    {
+      {
+        type = "unlock-recipe",
+        recipe = "thaumfactory-order-rune-stone"
+      },
+    },
+    prerequisites = { "thaumfactory-runes" },
+    unit =
+    {
+      count = 5040,
+      ingredients =
+      {
+        { "thaumfactory-order-crystal", 1 },
+      },
+      time = 5
+    },
+  },
+  {
+    type = "technology",
+    name = "thaumfactory-light-rune-stone",
+    icon = STUB,
+    icon_size = 256,
+    effects =
+    {
+      {
+        type = "unlock-recipe",
+        recipe = "thaumfactory-light-rune-stone"
+      },
+    },
+    prerequisites = { "thaumfactory-runes" },
+    unit =
+    {
+      count = 5040,
+      ingredients =
+      {
+        { "thaumfactory-light-crystal", 1 },
+      },
+      time = 5
+    },
+  },
+  {
+    type = "technology",
+    name = "thaumfactory-mine-rune-stone",
+    icon = STUB,
+    icon_size = 256,
+    effects =
+    {
+      {
+        type = "unlock-recipe",
+        recipe = "thaumfactory-mine-rune-stone"
+      },
+    },
+    prerequisites = { "thaumfactory-runes" },
+    unit =
+    {
+      count = 5040,
+      ingredients =
+      {
+        { "thaumfactory-mine-crystal", 1 },
+      },
+      time = 5
+    },
+  },
+  {
+    type = "technology",
+    name = "thaumfactory-tool-rune-stone",
+    icon = STUB,
+    icon_size = 256,
+    effects =
+    {
+      {
+        type = "unlock-recipe",
+        recipe = "thaumfactory-tool-rune-stone"
+      },
+    },
+    prerequisites = { "thaumfactory-runes" },
+    unit =
+    {
+      count = 5040,
+      ingredients =
+      {
+        { "thaumfactory-tool-crystal", 1 },
+      },
+      time = 5
+    },
+  },
+  {
+    type = "technology",
+    name = "thaumfactory-craft-rune-stone",
+    icon = STUB,
+    icon_size = 256,
+    effects =
+    {
+      {
+        type = "unlock-recipe",
+        recipe = "thaumfactory-craft-rune-stone"
+      },
+    },
+    prerequisites = { "thaumfactory-runes" },
+    unit =
+    {
+      count = 5040,
+      ingredients =
+      {
+        { "thaumfactory-craft-crystal", 1 },
       },
       time = 5
     },
