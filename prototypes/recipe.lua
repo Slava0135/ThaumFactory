@@ -5,7 +5,6 @@ local function arcane_stone_brick_recipe(element)
     {
       type = "recipe",
       name = "thaumfactory-arcane-stone-brick-" .. element,
-      enabled = true, -- TODO
       energy_required = 1,
       ingredients =
       {
@@ -31,7 +30,6 @@ data:extend({
   {
     type = "recipe",
     name = "thaumfactory-alchemical-furnace",
-    enabled = true, -- TODO
     energy_required = 3,
     -- same ingredients as furnace + some pipes
     ingredients = {
@@ -45,7 +43,6 @@ data:extend({
     type = "recipe",
     name = "thaumfactory-alchemical-centrifuge",
     category = "thaumfactory-fabricate",
-    enabled = true, -- TODO
     energy_required = 3,
     ingredients = {
       { type = "item",  name = "iron-plate",                      amount = 24 },
@@ -60,7 +57,6 @@ data:extend({
   {
     type = "recipe",
     name = "thaumfactory-arcane-fabricator",
-    enabled = true, -- TODO
     energy_required = 0.5,
     ingredients = {
       { type = "item", name = "iron-plate",                      amount = 15 },
@@ -74,7 +70,6 @@ data:extend({
     type = "recipe",
     name = "thaumfactory-aura-pylon",
     category = "thaumfactory-fabricate",
-    enabled = true, -- TODO
     energy_required = 15,
     ingredients = {
       { type = "item",  name = "iron-plate",                      amount = 20 },
@@ -90,7 +85,6 @@ data:extend({
   {
     type = "recipe",
     name = "thaumfactory-arcane-lab",
-    enabled = true, -- TODO
     energy_required = 2,
     ingredients =
     {
@@ -103,7 +97,6 @@ data:extend({
   {
     type = "recipe",
     name = "thaumfactory-arcane-stone-wall",
-    enabled = true, -- TODO
     ingredients =
     {
       { type = "item", name = "thaumfactory-arcane-stone-brick", amount = 5 },
@@ -113,7 +106,6 @@ data:extend({
   {
     type = "recipe",
     name = "thaumfactory-fire-firearm-magazine",
-    enabled = true, -- TODO
     energy_required = 1,
     ingredients = {
       { type = "item", name = "firearm-magazine",        amount = 1 },
@@ -124,7 +116,6 @@ data:extend({
   {
     type = "recipe",
     name = "thaumfactory-air-firearm-magazine",
-    enabled = true, -- TODO
     energy_required = 1,
     ingredients = {
       { type = "item", name = "firearm-magazine",       amount = 1 },
@@ -136,7 +127,6 @@ data:extend({
     type = "recipe",
     name = "thaumfactory-alumentum",
     category = "thaumfactory-fabricate",
-    enabled = true, -- TODO
     energy_required = 1,
     ingredients = {
       { type = "item",  name = "coal",                        amount = 1 },
@@ -150,7 +140,6 @@ data:extend({
     type = "recipe",
     name = "thaumfactory-native-iron-cluster",
     category = "thaumfactory-fabricate",
-    enabled = true, -- TODO
     energy_required = 1,
     ingredients = {
       { type = "item",  name = "iron-ore",                  amount = 1 },
@@ -163,7 +152,6 @@ data:extend({
     type = "recipe",
     name = "thaumfactory-native-iron-cluster-smelt",
     category = "smelting",
-    enabled = true, -- TODO
     auto_recycle = false,
     energy_required = 3.2,
     ingredients = { { type = "item", name = "thaumfactory-native-iron-cluster", amount = 1 } },
@@ -174,7 +162,6 @@ data:extend({
     type = "recipe",
     name = "thaumfactory-native-copper-cluster",
     category = "thaumfactory-fabricate",
-    enabled = true, -- TODO
     energy_required = 1,
     ingredients = {
       { type = "item",  name = "copper-ore",                amount = 1 },
@@ -187,7 +174,6 @@ data:extend({
     type = "recipe",
     name = "thaumfactory-native-copper-cluster-smelt",
     category = "smelting",
-    enabled = true, -- TODO
     auto_recycle = false,
     energy_required = 3.2,
     ingredients = { { type = "item", name = "thaumfactory-native-copper-cluster", amount = 1 } },
@@ -198,7 +184,6 @@ data:extend({
     type = "recipe",
     name = "thaumfactory-native-uranium-cluster",
     category = "thaumfactory-fabricate",
-    enabled = true, -- TODO
     energy_required = 1,
     ingredients = {
       { type = "item",  name = "uranium-ore",                amount = 1 },
@@ -211,7 +196,6 @@ data:extend({
   {
     type = "recipe",
     name = "thaumfactory-native-uranium-processing",
-    enabled = true, -- TODO
     energy_required = 12,
     auto_recycle = false,
     category = "centrifuging",

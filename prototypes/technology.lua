@@ -1,0 +1,343 @@
+local STUB = "__base__/graphics/technology/automation-science-pack.png"
+
+local function arcane_stone_brick_tech(element)
+  local tech = "thaumfactory-arcane-stone-brick-" .. element
+  data:extend({
+    {
+      type = "technology",
+      name = tech,
+      icon = STUB,
+      icon_size = 256,
+      effects =
+      {
+        {
+          type = "unlock-recipe",
+          recipe = "thaumfactory-arcane-stone-brick-" .. element,
+        },
+      },
+      research_trigger =
+      {
+        type = "mine-entity",
+        entity = "thaumfactory-" .. element .. "-infused-stone",
+      }
+    },
+  })
+  return tech
+end
+
+local air_tech = arcane_stone_brick_tech("air")
+local fire_tech = arcane_stone_brick_tech("fire")
+local water_tech = arcane_stone_brick_tech("water")
+local earth_tech = arcane_stone_brick_tech("earth")
+local order_tech = arcane_stone_brick_tech("order")
+local entropy_tech = arcane_stone_brick_tech("entropy")
+
+data:extend({
+  {
+    type = "technology",
+    name = "thaumfactory-arcane-lab",
+    icon = STUB,
+    icon_size = 256,
+    effects =
+    {
+      {
+        type = "unlock-recipe",
+        recipe = "thaumfactory-arcane-lab"
+      },
+    },
+    prerequisites = { air_tech, fire_tech, water_tech, earth_tech, order_tech, entropy_tech, "steam-power", "electronics" },
+    research_trigger =
+    {
+      type = "craft-item",
+      item = "thaumfactory-arcane-stone-brick",
+      count = 10
+    }
+  },
+  {
+    type = "technology",
+    name = "thaumfactory-arcane-fabricator",
+    icon = STUB,
+    icon_size = 256,
+    effects =
+    {
+      {
+        type = "unlock-recipe",
+        recipe = "thaumfactory-arcane-fabricator"
+      },
+    },
+    prerequisites = { "thaumfactory-arcane-lab" },
+    unit =
+    {
+      count = 24,
+      ingredients =
+      {
+        { "thaumfactory-air-shard",     1 },
+        { "thaumfactory-fire-shard",    1 },
+        { "thaumfactory-water-shard",   1 },
+        { "thaumfactory-earth-shard",   1 },
+        { "thaumfactory-entropy-shard", 1 },
+        { "thaumfactory-order-shard",   1 },
+      },
+      time = 5
+    },
+  },
+  {
+    type = "technology",
+    name = "thaumfactory-alchemical-furnace",
+    icon = STUB,
+    icon_size = 256,
+    effects =
+    {
+      {
+        type = "unlock-recipe",
+        recipe = "thaumfactory-alchemical-furnace"
+      },
+    },
+    prerequisites = { "thaumfactory-arcane-lab" },
+    unit =
+    {
+      count = 40,
+      ingredients =
+      {
+        { "thaumfactory-earth-shard", 1 },
+        { "thaumfactory-fire-shard",  1 },
+        { "thaumfactory-water-shard", 1 },
+      },
+      time = 5
+    },
+  },
+  {
+    type = "technology",
+    name = "thaumfactory-alchemical-centrifuge",
+    icon = STUB,
+    icon_size = 256,
+    effects =
+    {
+      {
+        type = "unlock-recipe",
+        recipe = "thaumfactory-alchemical-centrifuge"
+      },
+    },
+    prerequisites = { "thaumfactory-arcane-fabricator", "thaumfactory-alchemical-furnace" },
+    unit =
+    {
+      count = 720,
+      ingredients =
+      {
+        { "thaumfactory-order-crystal",   2 },
+        { "thaumfactory-water-crystal",   4 },
+        { "thaumfactory-entropy-crystal", 2 },
+      },
+      time = 5
+    },
+  },
+  {
+    type = "technology",
+    name = "thaumfactory-aura-pylon",
+    icon = STUB,
+    icon_size = 256,
+    effects =
+    {
+      {
+        type = "unlock-recipe",
+        recipe = "thaumfactory-aura-pylon"
+      },
+    },
+    prerequisites = { "thaumfactory-alchemical-centrifuge" },
+    unit =
+    {
+      count = 1680,
+      ingredients =
+      {
+        { "thaumfactory-water-crystal",    2 },
+        { "thaumfactory-exchange-crystal", 1 },
+        { "thaumfactory-machine-crystal",  1 },
+      },
+      time = 5
+    },
+  },
+  {
+    type = "technology",
+    name = "thaumfactory-arcane-stone-wall",
+    icon = STUB,
+    icon_size = 256,
+    effects =
+    {
+      {
+        type = "unlock-recipe",
+        recipe = "thaumfactory-arcane-stone-wall"
+      },
+    },
+    prerequisites = { "thaumfactory-arcane-lab", "stone-wall" },
+    unit =
+    {
+      count = 24,
+      ingredients =
+      {
+        { "thaumfactory-air-shard",     1 },
+        { "thaumfactory-fire-shard",    1 },
+        { "thaumfactory-water-shard",   1 },
+        { "thaumfactory-earth-shard",   1 },
+        { "thaumfactory-entropy-shard", 1 },
+        { "thaumfactory-order-shard",   1 },
+      },
+      time = 5
+    },
+  },
+  {
+    type = "technology",
+    name = "thaumfactory-fire-firearm-magazine",
+    icon = STUB,
+    icon_size = 256,
+    effects =
+    {
+      {
+        type = "unlock-recipe",
+        recipe = "thaumfactory-fire-firearm-magazine"
+      },
+    },
+    prerequisites = { "thaumfactory-arcane-lab", "military" },
+    unit =
+    {
+      count = 120,
+      ingredients =
+      {
+        { "thaumfactory-fire-shard", 1 },
+      },
+      time = 5
+    },
+  },
+  {
+    type = "technology",
+    name = "thaumfactory-air-firearm-magazine",
+    icon = STUB,
+    icon_size = 256,
+    effects =
+    {
+      {
+        type = "unlock-recipe",
+        recipe = "thaumfactory-air-firearm-magazine"
+      },
+    },
+    prerequisites = { "thaumfactory-arcane-lab", "military" },
+    unit =
+    {
+      count = 120,
+      ingredients =
+      {
+        { "thaumfactory-air-shard", 1 },
+      },
+      time = 5
+    },
+  },
+  {
+    type = "technology",
+    name = "thaumfactory-alumentum",
+    icon = STUB,
+    icon_size = 256,
+    effects =
+    {
+      {
+        type = "unlock-recipe",
+        recipe = "thaumfactory-alumentum"
+      },
+    },
+    prerequisites = { "thaumfactory-arcane-fabricator" },
+    unit =
+    {
+      count = 720,
+      ingredients =
+      {
+        { "thaumfactory-fire-crystal",    1 },
+        { "thaumfactory-entropy-crystal", 1 },
+        { "thaumfactory-energy-crystal",  1 },
+      },
+      time = 5
+    },
+  },
+  {
+    type = "technology",
+    name = "thaumfactory-native-iron-cluster",
+    icon = STUB,
+    icon_size = 256,
+    effects =
+    {
+      {
+        type = "unlock-recipe",
+        recipe = "thaumfactory-native-iron-cluster"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "thaumfactory-native-iron-cluster-smelt"
+      },
+    },
+    prerequisites = { "thaumfactory-arcane-fabricator" },
+    unit =
+    {
+      count = 720,
+      ingredients =
+      {
+        { "thaumfactory-metal-crystal", 1 },
+        { "thaumfactory-order-crystal", 1 },
+      },
+      time = 5
+    },
+  },
+  {
+    type = "technology",
+    name = "thaumfactory-native-copper-cluster",
+    icon = STUB,
+    icon_size = 256,
+    effects =
+    {
+      {
+        type = "unlock-recipe",
+        recipe = "thaumfactory-native-copper-cluster"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "thaumfactory-native-copper-cluster-smelt"
+      },
+    },
+    prerequisites = { "thaumfactory-arcane-fabricator" },
+    unit =
+    {
+      count = 720,
+      ingredients =
+      {
+        { "thaumfactory-metal-crystal", 1 },
+        { "thaumfactory-order-crystal", 1 },
+      },
+      time = 5
+    },
+  },
+  {
+    type = "technology",
+    name = "thaumfactory-native-uranium-cluster",
+    icon = STUB,
+    icon_size = 256,
+    effects =
+    {
+      {
+        type = "unlock-recipe",
+        recipe = "thaumfactory-native-uranium-cluster"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "thaumfactory-native-uranium-processing"
+      },
+    },
+    prerequisites = { "thaumfactory-arcane-fabricator", "uranium-processing" },
+    unit =
+    {
+      count = 1680,
+      ingredients =
+      {
+        { "thaumfactory-energy-crystal", 3 },
+        { "thaumfactory-light-crystal",  1 },
+        { "thaumfactory-order-crystal",  1 },
+      },
+      time = 5
+    },
+  },
+})

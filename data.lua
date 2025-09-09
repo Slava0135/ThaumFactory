@@ -19,4 +19,4 @@ require("prototypes.clusters")
 require("prototypes.runes")
 require("prototypes.ammo")
 require("prototypes.recipe")
-
+require("prototypes.technology")
