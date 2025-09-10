@@ -292,7 +292,7 @@ data:extend({
   },
   {
     type = "technology",
-    name = "thaumfactory-fire-firearm-magazine",
+    name = "thaumfactory-aspect-firearm-magazine",
     icon = STUB,
     icon_size = 256,
     effects =
@@ -301,25 +301,6 @@ data:extend({
         type = "unlock-recipe",
         recipe = "thaumfactory-fire-firearm-magazine"
       },
-    },
-    prerequisites = { "thaumfactory-arcane-lab", "military" },
-    unit =
-    {
-      count = 120,
-      ingredients =
-      {
-        { "thaumfactory-fire-shard", 1 },
-      },
-      time = 5
-    },
-  },
-  {
-    type = "technology",
-    name = "thaumfactory-air-firearm-magazine",
-    icon = STUB,
-    icon_size = 256,
-    effects =
-    {
       {
         type = "unlock-recipe",
         recipe = "thaumfactory-air-firearm-magazine"
@@ -331,7 +312,12 @@ data:extend({
       count = 120,
       ingredients =
       {
-        { "thaumfactory-air-shard", 1 },
+        { "thaumfactory-air-shard",     1 },
+        { "thaumfactory-fire-shard",    1 },
+        { "thaumfactory-water-shard",   1 },
+        { "thaumfactory-earth-shard",   1 },
+        { "thaumfactory-entropy-shard", 1 },
+        { "thaumfactory-order-shard",   1 },
       },
       time = 5
     },
