@@ -1,4 +1,5 @@
 local item_sounds = require("__base__.prototypes.item_sounds")
+local util = require("__core__.lualib.util")
 
 data:extend({
   {
@@ -7,7 +8,7 @@ data:extend({
     icons = {
       {
         icon = "__thaumfactory__/graphics/icons/native-cluster.png",
-        tint = { 153, 173, 182 } -- #99ADB6
+        tint = util.color("#bfd8e3")
       }
     },
     subgroup = "thaumfactory-resources",
@@ -24,7 +25,7 @@ data:extend({
     icons = {
       {
         icon = "__thaumfactory__/graphics/icons/native-cluster.png",
-        tint = { 206, 90, 43 } -- #CE5A2B
+        tint = util.color("#fe9a6c")
       }
     },
     subgroup = "thaumfactory-resources",
@@ -41,7 +42,7 @@ data:extend({
     icons = {
       {
         icon = "__thaumfactory__/graphics/icons/native-cluster.png",
-        tint = { 62, 161, 8 } -- #3EA108
+        tint = util.color("#3EA108")
       },
       {
         icon = "__thaumfactory__/graphics/icons/native-cluster.png",
