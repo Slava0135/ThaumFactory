@@ -29,7 +29,7 @@ local function shard(element, color)
       name = "thaumfactory-" .. element .. "-infused-stone",
       icons = {
         {
-          icon = "__base__/graphics/icons/stone.png",
+          icon = "__thaumfactory__/graphics/icons/infused-stone.png",
           tint = { color.r, color.g, color.b }
         }
       },
@@ -53,16 +53,16 @@ local function shard(element, color)
         regular_rq_factor_multiplier = 1.0,
         starting_rq_factor_multiplier = 1.1
       }),
-      stage_counts = { 15000, 9500, 5500, 2900, 1300, 400, 150, 80 },
+      stage_counts = { 5500, 1300, 150 },
       stages =
       {
         sheet =
         {
-          filename = "__base__/graphics/entity/stone/stone.png",
+          filename = "__thaumfactory__/graphics/entities/infused-stone.png",
           priority = "extra-high",
           size = 128,
-          frame_count = 8,
-          variation_count = 8,
+          frame_count = 4,
+          variation_count = 3,
           scale = 0.5,
           tint = { color.r, color.g, color.b }
         }
