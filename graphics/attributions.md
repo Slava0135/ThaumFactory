@@ -49,8 +49,9 @@ Icons
 - [alumentum.png](icons/alumentum.png): made by slava0135 (*CC BY-SA 4.0*)
 - [native-cluster.png](icons/native-cluster.png): made by slava0135 (*CC BY-SA 4.0*)
 - [rune.png](icons/rune.png): made by slava0135 (*CC BY-SA 4.0*)
-- [alchemical-furnace.png](icons/alchemical-furnace.png): made by slava0135 (*CC BY-SA 4.0*)
 - [infused-stone.png](icons/infused-stone.png): made by slava0135 (*CC BY-SA 4.0*)
+- [alchemical-furnace.png](icons/alchemical-furnace.png): made by slava0135 (*CC BY-SA 4.0*)
+- [aura-pylon.png](icons/aura-pylon.png): made by slava0135 (*CC BY-SA 4.0*)
 
 Entities
 --------
@@ -58,3 +59,5 @@ Entities
 - [infused-stone.png](entities/infused-stone.png): made by slava0135 (*CC BY-SA 4.0*)
 - [alchemical-furnace.png](entities/alchemical-furnace.png): made by slava0135 (*CC BY-SA 4.0*)
 - [alchemical-furnace-shadow.png](entities/alchemical-furnace-shadow.png): made by slava0135 (*CC BY-SA 4.0*)
+- [aura-pylon.png](entities/aura-pylon.png): made by slava0135 (*CC BY-SA 4.0*)
+- [aura-pylon-shadow.png](entities/aura-pylon-shadow.png): made by slava0135 (*CC BY-SA 4.0*)

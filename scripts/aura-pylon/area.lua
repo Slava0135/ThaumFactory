@@ -1,6 +1,6 @@
 local math2d = require("__core__.lualib.math2d")
 
-local area = { radius = 11.5, storage_radius = 2.5 }
+local area = { radius = 11, storage_radius = 2 }
 
 function area:storage(position)
   return math2d.bounding_box.create_from_centre(position, 2 * area.storage_radius,
