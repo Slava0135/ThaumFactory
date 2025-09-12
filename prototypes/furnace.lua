@@ -215,6 +215,15 @@ data:extend({
             height = 180,
             shift = util.by_pixel(0, -15),
             scale = 0.5
+          },
+          {
+            filename = "__thaumfactory__/graphics/entities/alchemical-furnace-shadow.png",
+            priority = "high",
+            width = 238,
+            height = 100,
+            draw_as_shadow = true,
+            shift = util.by_pixel(30, 8),
+            scale = 0.5
           }
         }
       },
