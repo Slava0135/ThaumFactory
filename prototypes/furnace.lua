@@ -6,7 +6,7 @@ data:extend({
   {
     type = "item",
     name = "thaumfactory-alchemical-furnace",
-    icon = "__base__/graphics/icons/stone-furnace.png",
+    icon = "__thaumfactory__/graphics/icons/alchemical-furnace.png",
     subgroup = "thaumfactory-alchemy",
     order = "t-alchemical-furnace",
     inventory_move_sound = item_sounds.brick_inventory_move,
@@ -18,7 +18,7 @@ data:extend({
   {
     type = "furnace",
     name = "thaumfactory-alchemical-furnace",
-    icon = "__base__/graphics/icons/stone-furnace.png",
+    icon = "__thaumfactory__/graphics/icons/alchemical-furnace.png",
     flags = { "placeable-neutral", "placeable-player", "player-creation" },
     minable = { mining_time = 0.2, result = "thaumfactory-alchemical-furnace" },
     -- fast_replaceable_group = "furnace",
