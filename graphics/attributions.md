@@ -52,6 +52,7 @@ Icons
 - [infused-stone.png](icons/infused-stone.png): made by slava0135 (*CC BY-SA 4.0*)
 - [alchemical-furnace.png](icons/alchemical-furnace.png): made by slava0135 (*CC BY-SA 4.0*)
 - [aura-pylon.png](icons/aura-pylon.png): made by slava0135 (*CC BY-SA 4.0*)
+- [arcane-fabricator.png](icons/arcane-fabricator.png): made by slava0135 (*CC BY-SA 4.0*)
 
 Entities
 --------
@@ -61,3 +62,5 @@ Entities
 - [alchemical-furnace-shadow.png](entities/alchemical-furnace-shadow.png): made by slava0135 (*CC BY-SA 4.0*)
 - [aura-pylon.png](entities/aura-pylon.png): made by slava0135 (*CC BY-SA 4.0*)
 - [aura-pylon-shadow.png](entities/aura-pylon-shadow.png): made by slava0135 (*CC BY-SA 4.0*)
+- [arcane-fabricator.png](entities/arcane-fabricator.png): made by slava0135 (*CC BY-SA 4.0*)
+- [arcane-fabricator-shadow.png](entities/arcane-fabricator-shadow.png): made by slava0135 (*CC BY-SA 4.0*)
