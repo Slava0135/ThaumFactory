@@ -6,12 +6,7 @@ data:extend({
   {
     type = "item",
     name = "thaumfactory-arcane-lab",
-    icons = {
-      {
-        icon = "__base__/graphics/icons/lab.png",
-        tint = { 128, 128, 128 } -- #808080
-      },
-    },
+    icon = "__thaumfactory__/graphics/icons/arcane-lab.png",
     subgroup = "thaumfactory-production",
     order = "t-arcane-lab",
     inventory_move_sound = item_sounds.lab_inventory_move,
@@ -23,17 +18,12 @@ data:extend({
   {
     type = "lab",
     name = "thaumfactory-arcane-lab",
-    icons = {
-      {
-        icon = "__base__/graphics/icons/lab.png",
-        tint = { 128, 128, 128 } -- #808080
-      },
-    },
+    icon = "__thaumfactory__/graphics/icons/arcane-lab.png",
     flags = { "placeable-player", "player-creation" },
     minable = { mining_time = 0.2, result = "lab" },
     max_health = 150,
-    corpse = "lab-remnants",
-    dying_explosion = "lab-explosion",
+    corpse = "medium-remnants",
+    dying_explosion = "medium-explosion",
     collision_box = { { -1.2, -1.2 }, { 1.2, 1.2 } },
     selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
     damaged_trigger_effect = hit_effects.entity(),
@@ -42,49 +32,35 @@ data:extend({
       layers =
       {
         {
-          filename = "__base__/graphics/entity/lab/lab.png",
-          width = 194,
-          height = 174,
-          frame_count = 33,
-          line_length = 11,
+          filename = "__thaumfactory__/graphics/entities/arcane-lab.png",
+          width = 192,
+          height = 228,
+          frame_count = 10,
           animation_speed = 1 / 3,
-          shift = util.by_pixel(0, 1.5),
+          shift = util.by_pixel(0, 0),
           scale = 0.5,
-          tint = { 128, 128, 128 } -- #808080
         },
         {
-          filename = "__base__/graphics/entity/lab/lab-integration.png",
-          width = 242,
-          height = 162,
+          filename = "__thaumfactory__/graphics/entities/arcane-lab-shadow.png",
+          width = 440,
+          height = 192,
           line_length = 1,
-          repeat_count = 33,
-          animation_speed = 1 / 3,
-          shift = util.by_pixel(0, 15.5),
-          scale = 0.5
+          repeat_count = 10,
+          shift = util.by_pixel(64, 10),
+          scale = 0.5,
+          draw_as_shadow = true
         },
         {
-          filename = "__base__/graphics/entity/lab/lab-light.png",
+          filename = "__thaumfactory__/graphics/entities/arcane-lab-light.png",
           blend_mode = "additive",
           draw_as_light = true,
-          width = 216,
-          height = 194,
-          frame_count = 33,
-          line_length = 11,
+          width = 192,
+          height = 228,
+          frame_count = 10,
           animation_speed = 1 / 3,
           shift = util.by_pixel(0, 0),
           scale = 0.5
         },
-        {
-          filename = "__base__/graphics/entity/lab/lab-shadow.png",
-          width = 242,
-          height = 136,
-          line_length = 1,
-          repeat_count = 33,
-          animation_speed = 1 / 3,
-          shift = util.by_pixel(13, 11),
-          scale = 0.5,
-          draw_as_shadow = true
-        }
       }
     },
     off_animation =
@@ -92,27 +68,19 @@ data:extend({
       layers =
       {
         {
-          filename = "__base__/graphics/entity/lab/lab.png",
-          width = 194,
-          height = 174,
-          shift = util.by_pixel(0, 1.5),
+          filename = "__thaumfactory__/graphics/entities/arcane-lab.png",
+          width = 192,
+          height = 228,
+          shift = util.by_pixel(0, 0),
           scale = 0.5,
-          tint = { 128, 128, 128 } -- #808080
         },
         {
-          filename = "__base__/graphics/entity/lab/lab-integration.png",
-          width = 242,
-          height = 162,
-          shift = util.by_pixel(0, 15.5),
-          scale = 0.5
-        },
-        {
-          filename = "__base__/graphics/entity/lab/lab-shadow.png",
-          width = 242,
-          height = 136,
-          shift = util.by_pixel(13, 11),
-          draw_as_shadow = true,
-          scale = 0.5
+          filename = "__thaumfactory__/graphics/entities/arcane-lab-shadow.png",
+          width = 440,
+          height = 192,
+          shift = util.by_pixel(60, 10),
+          scale = 0.5,
+          draw_as_shadow = true
         }
       }
     },
