@@ -89,6 +89,8 @@ data:extend({
             priority = "high",
             width = 200,
             height = 210,
+            frame_count = 10,
+            animation_speed = 1 / 3,
             shift = util.by_pixel(0, -3),
             scale = 0.5
           },
@@ -97,10 +99,23 @@ data:extend({
             priority = "high",
             width = 280,
             height = 200,
+            line_length = 1,
+            repeat_count = 10,
             draw_as_shadow = true,
             shift = util.by_pixel(20, 2),
             scale = 0.5
-          }
+          },
+          {
+            filename = "__thaumfactory__/graphics/entities/arcane-fabricator-light.png",
+            priority = "high",
+            draw_as_light = true,
+            width = 200,
+            height = 210,
+            frame_count = 10,
+            animation_speed = 1 / 3,
+            shift = util.by_pixel(0, -3),
+            scale = 0.5
+          },
         }
       },
     },
