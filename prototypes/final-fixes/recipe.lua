@@ -68,6 +68,7 @@ for element, a in pairs(mod_data.aspects) do
   data:extend({
     {
       type = "recipe",
+      enabled = false,
       name = crystal_name,
       icon = crystal.icon,
       icons = crystal.icons,
