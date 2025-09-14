@@ -17,7 +17,7 @@ local function shard(element, color)
       icons = {
         {
           icon = "__thaumfactory__/graphics/icons/pure-shard.png",
-          tint = { color.r, color.g, color.b },
+          tint = color,
         }
       },
       subgroup = "raw-resource",
@@ -30,7 +30,7 @@ local function shard(element, color)
       icons = {
         {
           icon = "__thaumfactory__/graphics/icons/infused-stone.png",
-          tint = { color.r, color.g, color.b }
+          tint = color,
         }
       },
       flags = { "placeable-neutral" },
@@ -65,11 +65,11 @@ local function shard(element, color)
           frame_count = 4,
           variation_count = 3,
           scale = 0.5,
-          tint = { color.r, color.g, color.b }
+          tint = color,
         }
       },
       mining_visualisation_tint = { r = color.r, g = color.g, b = color.b, a = 1.000 },
-      map_color = { color.r, color.g, color.b },
+      map_color = color,
     },
     {
       type = "autoplace-control",
