@@ -53,6 +53,8 @@ Icons
 - [alchemical-furnace.png](icons/alchemical-furnace.png): made by slava0135 (*CC BY-SA 4.0*)
 - [aura-pylon.png](icons/aura-pylon.png): made by slava0135 (*CC BY-SA 4.0*)
 - [arcane-fabricator.png](icons/arcane-fabricator.png): made by slava0135 (*CC BY-SA 4.0*)
+- [arcane-lab.png](icons/arcane-lab.png): made by slava0135 (*CC BY-SA 4.0*)
+- [alchemical-centrifuge.png](icons/alchemical-centrifuge.png): made by slava0135 (*CC BY-SA 4.0*)
 
 Entities
 --------
@@ -64,3 +66,10 @@ Entities
 - [aura-pylon-shadow.png](entities/aura-pylon-shadow.png): made by slava0135 (*CC BY-SA 4.0*)
 - [arcane-fabricator.png](entities/arcane-fabricator.png): made by slava0135 (*CC BY-SA 4.0*)
 - [arcane-fabricator-shadow.png](entities/arcane-fabricator-shadow.png): made by slava0135 (*CC BY-SA 4.0*)
+- [arcane-fabricator-light.png](entities/arcane-fabricator-light.png): made by slava0135 (*CC BY-SA 4.0*)
+- [arcane-lab.png](entities/arcane-lab.png): made by slava0135 (*CC BY-SA 4.0*)
+- [arcane-lab-shadow.png](entities/arcane-lab-shadow.png): made by slava0135 (*CC BY-SA 4.0*)
+- [arcane-lab-light.png](entities/arcane-lab-light.png): made by slava0135 (*CC BY-SA 4.0*)
+- [alchemical-centrifuge.png](entities/alchemical-centrifuge.png): made by slava0135 (*CC BY-SA 4.0*)
+- [alchemical-centrifuge-shadow.png](entities/alchemical-centrifuge-shadow.png): made by slava0135 (*CC BY-SA 4.0*)
+- [alchemical-centrifuge-light.png](entities/alchemical-centrifuge-light.png): made by slava0135 (*CC BY-SA 4.0*)
