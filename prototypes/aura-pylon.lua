@@ -80,8 +80,8 @@ data:extend({
     },
     flow_length_in_ticks = 360,
     impact_category = "stone",
-    open_sound = sounds.metal_large_open,
-    close_sound = sounds.metal_large_close,
+    open_sound = sounds.metal_small_open,
+    close_sound = sounds.metal_small_close,
     working_sound =
     {
       sound = { filename = "__base__/sound/storage-tank.ogg", volume = 0.6, audible_distance_modifier = 0.5 },
