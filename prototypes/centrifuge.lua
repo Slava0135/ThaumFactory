@@ -142,20 +142,5 @@ data:extend({
     },
     energy_usage = "350kW",
     allowed_effects = { "consumption", "speed", "productivity", "pollution", "quality" },
-    water_reflection =
-    {
-      pictures =
-      {
-        filename = "__base__/graphics/entity/centrifuge/centrifuge-reflection.png",
-        priority = "extra-high",
-        width = 28,
-        height = 32,
-        shift = util.by_pixel(0, 65),
-        variation_count = 1,
-        scale = 5
-      },
-      rotate = false,
-      orientation_to_variation = false
-    }
   },
 })
