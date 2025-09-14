@@ -96,7 +96,7 @@ data:extend({
       fade_in_ticks = 4,
       fade_out_ticks = 20
     },
-    impact_category = "glass",
+    impact_category = "stone",
     open_sound = sounds.lab_open,
     close_sound = sounds.lab_close,
     energy_source =

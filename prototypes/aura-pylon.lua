@@ -79,7 +79,7 @@ data:extend({
       },
     },
     flow_length_in_ticks = 360,
-    impact_category = "metal",
+    impact_category = "stone",
     open_sound = sounds.metal_large_open,
     close_sound = sounds.metal_large_close,
     working_sound =

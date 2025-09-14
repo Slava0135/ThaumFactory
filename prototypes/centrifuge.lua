@@ -125,7 +125,7 @@ data:extend({
     },
     open_sound = sounds.machine_open,
     close_sound = sounds.machine_close,
-    impact_category = "metal-large",
+    impact_category = "metal",
     working_sound =
     {
       sound = sound_variations("__base__/sound/centrifuge", 3, 0.3, volume_multiplier("main-menu", 1.5)),
