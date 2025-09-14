@@ -33,7 +33,7 @@
 
 We are happy to accept contributions from 3D artists, 2D artists, programmers, sound designers, translators - *anyone*!
 
-Check [contribution guidelines](./docs/CONTRIBUTING.md) to start!
+Check [contribution guidelines](./CONTRIBUTING.md) to start!
 
 ## Credits
 
