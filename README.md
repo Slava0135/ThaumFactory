@@ -15,13 +15,13 @@
   - **Fire runestone**: get fire immunity and leave fire trail behind you.
   - **Motion runestone**: get massive speed boost.
   - **Craft runestone**: increase crafting speed and repair stuff around you.
-  - Mine runestone: mine faster and further **(including buildings!)*
+  - **Mine runestone**: mine faster and further *(including buildings!)*
   - *and more...*
 - **Aura pylon**: machines that diffuse essentia, each triggering a distinct phenomenon.
-  - Plant aspect: create trees around.
-  - Fire aspect: power solid fuel machinery, including furnaces and boilers.
-  - Mine aspect: mine rocks and ores.
-  - Earth aspect: create rocks from nothing.
+  - **Plant aspect**: create trees around.
+  - **Fire aspect**: power solid fuel machinery, including furnaces and boilers.
+  - **Mine aspect**: mine rocks and ores.
+  - **Earth aspect**: create rocks from nothing.
   - *and more...*
 - Create *native clusters* from ores for **double ore output**.
 - Cool looking **dark walls and paths** made from arcane stone.
