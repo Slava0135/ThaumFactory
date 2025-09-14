@@ -1,6 +1,8 @@
 local mod_data = require("prototypes.mod-data")
 mod_data:create()
 
+-- note: order may be important
+
 require("prototypes.sounds")
 require("prototypes.smoke")
 require("prototypes.aspects")

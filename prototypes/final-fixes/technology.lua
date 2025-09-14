@@ -1,5 +1,6 @@
 local mod_data = require("prototypes.mod-data"):get()
 
+-- unlock effects for crystallization technology
 local crystal_recipes = {}
 for element, _ in pairs(mod_data.aspects) do
   local crystal_name = "thaumfactory-" .. element .. "-crystal"

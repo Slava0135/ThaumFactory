@@ -1,6 +1,7 @@
 local mod_data = require("prototypes.mod-data"):get()
 local aspect_sorting = require("aspect-sorting")
 
+-- add recipes for smelting items
 for name, a in pairs(mod_data.item_aspects) do
   -- aspects should be sorted so the recipes always use same pipe outputs
   local sorted_aspects = aspect_sorting:sort(a)
@@ -34,6 +35,7 @@ for name, a in pairs(mod_data.item_aspects) do
   })
 end
 
+-- add recipes for crystals and breaking aspects into components
 for element, a in pairs(mod_data.aspects) do
   if a.component1 and a.component2 then
     local fluid = data.raw["fluid"]["thaumfactory-aspect-" .. element]

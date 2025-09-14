@@ -2,7 +2,7 @@ local durability = require("durability")
 
 local restore_handler_id, restore_handler = durability:register_event_handler("fire")
 
--- spawn fire
+-- spawn fire on the ground
 local function on_player_changed_position(event)
   local player = game.get_player(event.player_index)
   if player.controller_type == defines.controllers.character then
@@ -19,7 +19,7 @@ local function on_player_changed_position(event)
   end
 end
 
--- fire resistance
+-- give player fire resistance
 local function on_entity_damaged(event)
   local inventory = event.entity.get_main_inventory()
   if inventory and event.damage_type.valid and event.damage_type.name == "fire" then

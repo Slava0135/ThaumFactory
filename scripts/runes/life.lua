@@ -2,7 +2,7 @@ local durability = require("durability")
 
 local restore_handler_id, restore_handler = durability:register_event_handler("life")
 
--- regeneration
+-- regeneration effect for player
 -- 5 per second
 -- player health is 250
 -- 50 seconds to full health

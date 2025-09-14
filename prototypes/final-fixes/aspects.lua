@@ -1,6 +1,7 @@
 local mod_data = require("prototypes.mod-data"):get()
 local aspect_sorting = require("aspect-sorting")
 
+-- add aspects to item descriptions
 for name, aspects in pairs(mod_data.item_aspects) do
   local sorted_aspects = aspect_sorting:sort(aspects)
 
@@ -33,6 +34,7 @@ for name, aspects in pairs(mod_data.item_aspects) do
   ::next::
 end
 
+-- add aspects to aspect (fluid) descriptions
 for element, a in pairs(mod_data.aspects) do
   if a.component1 and a.component2 then
     local fluid = data.raw["fluid"]["thaumfactory-aspect-" .. element]

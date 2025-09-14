@@ -1,5 +1,6 @@
 local mod_data = require("prototypes.mod-data"):get()
 
+-- add aspect shards and crystals to arcane lab inputs
 local lab_inputs = data.raw["lab"]["thaumfactory-arcane-lab"].inputs
 
 -- make sure order is always correct (unlikely to change)

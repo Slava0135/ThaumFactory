@@ -7,6 +7,7 @@ function area:storage(position)
     2 * area.storage_radius)
 end
 
+-- active area of pylon
 function area:pylon(position)
   return math2d.bounding_box.create_from_centre(position, 2 * area.radius,
     2 * area.radius)

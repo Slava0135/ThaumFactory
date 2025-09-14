@@ -55,7 +55,6 @@ data:extend({
     fluid_box =
     {
       volume = 5000,
-      -- TODO: pipe pictures
       pipe_covers = pipecoverspictures(),
       pipe_connections =
       {

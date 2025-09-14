@@ -6,6 +6,13 @@ local item_aspects = {}
 mod_data.item_aspects = item_aspects
 local hash = require("lib.hash")
 
+--- create new aspect
+---@param element string name of aspect (element)
+---@param color any 
+---@param tier number "N + 1" tier aspects have at least one tier "N" component aspect 
+---@param component1 string?
+---@param component2 string?
+---@param override_order number? only used for priamal aspects for manual ordering
 local function aspect(element, color, tier, component1, component2, override_order)
   -- aspects are ordered by tier 
   -- aspects are additionally ordered by hash based on their names
@@ -123,7 +130,7 @@ aspect("protection", util.color("#00C0C0"), 7, "tool", "earth")
 -- 90 = 3 * 5 * 6
 -- 120 = 4 * 5 * 6
 -- 720 = 1 * 2 * 3 * 4 * 5 * 6 * 7
--- ...
+-- ... (can be any other combination)
 
 -- mod resources
 item_aspects["thaumfactory-air-shard"] = { air = 3, magic = 1, crystal = 1 }

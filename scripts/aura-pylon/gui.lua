@@ -1,6 +1,7 @@
 local util = require("__core__.lualib.util")
 local area = require("area")
 
+-- render area of effect boxes for selected aura pylon, if any
 local function on_tick()
   for _, unit_number in pairs(storage.aura_pylons) do
     local pylon = game.get_entity_by_unit_number(unit_number)

@@ -2,7 +2,7 @@ local durability = require("durability")
 
 local restore_handler_id, restore_handler = durability:register_event_handler("light")
 
--- render light
+-- spawn light around player
 local function on_60th_tick()
   for _, player in pairs(game.players) do
     if player.controller_type == defines.controllers.character then

@@ -2,6 +2,7 @@ local durability = require("durability")
 
 local restore_handler_id, restore_handler = durability:register_event_handler("motion")
 
+-- track active runes and give player modifiers
 local function on_player_changed_position(event)
   local player = game.get_player(event.player_index)
   if player.controller_type == defines.controllers.character then

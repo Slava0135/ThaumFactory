@@ -2,6 +2,9 @@ local mod_data = require("prototypes.mod-data"):get()
 
 local aspect_sorting = {}
 
+--- Sort table of aspects based on tier and order
+---@param aspects table<string, number>
+---@return { element:string, n:number, tier:number, order:number }[]
 function aspect_sorting:sort(aspects)
   local sorted_aspects = {}
   for element, n in pairs(aspects) do

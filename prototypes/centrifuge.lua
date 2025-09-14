@@ -22,7 +22,6 @@ data:extend({
     icon = "__thaumfactory__/graphics/icons/alchemical-centrifuge.png",
     flags = { "placeable-neutral", "placeable-player", "player-creation" },
     minable = { mining_time = 0.1, result = "thaumfactory-alchemical-centrifuge" },
-    -- fast_replaceable_group = "centrifuge",
     max_health = 350,
     corpse = "medium-remnants",
     dying_explosion = "medium-explosion",

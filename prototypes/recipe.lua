@@ -33,7 +33,6 @@ data:extend({
     name = "thaumfactory-alchemical-furnace",
     enabled = false,
     energy_required = 3,
-    -- same ingredients as furnace + some pipes
     ingredients = {
       { type = "item", name = "iron-plate",                      amount = 6 },
       { type = "item", name = "thaumfactory-arcane-stone-brick", amount = 10 },

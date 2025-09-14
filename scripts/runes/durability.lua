@@ -1,6 +1,6 @@
 local durability = {}
 
--- restore durability
+-- restore rune durability with crystals
 function durability:register_event_handler(element)
   return defines.events.on_tick, function(_)
     for _, player in pairs(game.players) do

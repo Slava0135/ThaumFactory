@@ -2,6 +2,7 @@ local durability = require("durability")
 
 local restore_handler_id, restore_handler = durability:register_event_handler("craft")
 
+-- track active runes and give player modifiers
 -- not using `on_tick` because you can't have multiple events in same file
 local function on_2th_tick()
   for _, player in pairs(game.players) do
@@ -34,8 +35,7 @@ local function on_2th_tick()
   end
 end
 
--- repair
--- 5 per second
+-- repair entities around player (5 hp per second)
 local function on_12th_tick()
   for _, player in pairs(game.players) do
     if player.controller_type == defines.controllers.character then
@@ -60,6 +60,7 @@ local function on_12th_tick()
   end
 end
 
+-- drain durability for each item crafted
 local function on_player_crafted_item(event)
   local player = game.get_player(event.player_index)
   if player.controller_type == defines.controllers.character then

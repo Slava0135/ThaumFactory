@@ -36,6 +36,7 @@ data:extend({
         percent = 70
       }
     },
+    -- clockwise
     fluid_boxes =
     {
       {

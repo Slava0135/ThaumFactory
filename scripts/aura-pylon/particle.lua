@@ -12,6 +12,7 @@ local function random_vector()
   return { x = random_scalar(), y = random_scalar() }
 end
 
+--- create trail of particles
 --- @param arg {
 ---   density: number,
 ---   from: table,
@@ -62,6 +63,7 @@ function particle:trail(arg)
   end
 end
 
+--- create trail of smoke
 --- @param arg {
 ---   density: number,
 ---   from: table,

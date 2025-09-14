@@ -21,8 +21,6 @@ data:extend({
     icon = "__thaumfactory__/graphics/icons/alchemical-furnace.png",
     flags = { "placeable-neutral", "placeable-player", "player-creation" },
     minable = { mining_time = 0.2, result = "thaumfactory-alchemical-furnace" },
-    -- fast_replaceable_group = "furnace",
-    -- next_upgrade = "steel-furnace",
     circuit_wire_max_distance = furnace_circuit_wire_max_distance,
     circuit_connector = circuit_connector_definitions["stone-furnace"],
     max_health = 200,
