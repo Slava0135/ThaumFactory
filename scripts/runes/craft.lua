@@ -61,6 +61,7 @@ local function on_12th_tick()
 end
 
 -- drain durability for each item crafted
+-- using integer numbers instead of floats for better UI experience
 local function on_player_crafted_item(event)
   local player = game.get_player(event.player_index)
   if player.controller_type == defines.controllers.character then
