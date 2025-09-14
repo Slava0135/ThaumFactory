@@ -6,7 +6,7 @@ data:extend({
   {
     type = "item",
     name = "thaumfactory-alchemical-centrifuge",
-    icon = "__base__/graphics/icons/centrifuge.png",
+    icon = "__thaumfactory__/graphics/icons/alchemical-centrifuge.png",
     subgroup = "thaumfactory-alchemy",
     order = "t-alchemical-centrifuge",
     inventory_move_sound = item_sounds.mechanical_inventory_move,
@@ -19,7 +19,7 @@ data:extend({
   {
     type = "assembling-machine",
     name = "thaumfactory-alchemical-centrifuge",
-    icon = "__base__/graphics/icons/centrifuge.png",
+    icon = "__thaumfactory__/graphics/icons/alchemical-centrifuge.png",
     flags = { "placeable-neutral", "placeable-player", "player-creation" },
     minable = { mining_time = 0.1, result = "thaumfactory-alchemical-centrifuge" },
     -- fast_replaceable_group = "centrifuge",
@@ -85,137 +85,43 @@ data:extend({
 
     graphics_set =
     {
-      always_draw_idle_animation = true,
-      idle_animation =
+      animation =
       {
         layers =
         {
-          -- Centrifuge A
           {
-            filename = "__base__/graphics/entity/centrifuge/centrifuge-C.png",
+            filename = "__thaumfactory__/graphics/entities/alchemical-centrifuge.png",
             priority = "high",
-            scale = 0.5,
-            line_length = 8,
-            width = 237,
-            height = 214,
-            frame_count = 64,
-            shift = util.by_pixel(-0.25, -26.5)
+            width = 200,
+            height = 240,
+            frame_count = 10,
+            animation_speed = 0.7,
+            shift = util.by_pixel(0, -6),
+            scale = 0.5
           },
           {
-            filename = "__base__/graphics/entity/centrifuge/centrifuge-C-shadow.png",
+            filename = "__thaumfactory__/graphics/entities/alchemical-centrifuge-shadow.png",
+            priority = "high",
+            width = 420,
+            height = 192,
+            line_length = 1,
+            repeat_count = 10,
             draw_as_shadow = true,
-            priority = "high",
-            scale = 0.5,
-            line_length = 8,
-            width = 279,
-            height = 152,
-            frame_count = 64,
-            shift = util.by_pixel(16.75, -10)
-          },
-          -- Centrifuge B
-          {
-            filename = "__base__/graphics/entity/centrifuge/centrifuge-B.png",
-            priority = "high",
-            scale = 0.5,
-            line_length = 8,
-            width = 156,
-            height = 234,
-            frame_count = 64,
-            shift = util.by_pixel(23, 6.5)
+            shift = util.by_pixel(52, 8),
+            scale = 0.5
           },
           {
-            filename = "__base__/graphics/entity/centrifuge/centrifuge-B-shadow.png",
-            draw_as_shadow = true,
+            filename = "__thaumfactory__/graphics/entities/alchemical-centrifuge-light.png",
             priority = "high",
-            scale = 0.5,
-            line_length = 8,
-            width = 251,
-            height = 149,
-            frame_count = 64,
-            shift = util.by_pixel(63.25, 15.25)
+            width = 200,
+            height = 240,
+            frame_count = 10,
+            animation_speed = 0.7,
+            shift = util.by_pixel(0, -6),
+            scale = 0.5
           },
-          -- Centrifuge A
-          {
-            filename = "__base__/graphics/entity/centrifuge/centrifuge-A.png",
-            priority = "high",
-            scale = 0.5,
-            line_length = 8,
-            width = 139,
-            height = 246,
-            frame_count = 64,
-            shift = util.by_pixel(-26.25, 3.5)
-          },
-          {
-            filename = "__base__/graphics/entity/centrifuge/centrifuge-A-shadow.png",
-            priority = "high",
-            draw_as_shadow = true,
-            scale = 0.5,
-            line_length = 8,
-            width = 230,
-            height = 124,
-            frame_count = 64,
-            shift = util.by_pixel(8.5, 23.5)
-          }
         }
       },
-
-      working_visualisations =
-      {
-        {
-          effect = "uranium-glow",
-          fadeout = true,
-          light = { intensity = 0.2, size = 9.9, shift = { 0, 0 }, color = { 0, 1, 0 } }
-        },
-        {
-          effect = "uranium-glow",
-          fadeout = true,
-          animation =
-          {
-            layers =
-            {
-              -- Centrifuge C
-              {
-                filename = "__base__/graphics/entity/centrifuge/centrifuge-C-light.png",
-                priority = "high",
-                scale = 0.5,
-                blend_mode = "additive", -- centrifuge
-                line_length = 8,
-                width = 190,
-                height = 207,
-                frame_count = 64,
-                draw_as_glow = true,
-                shift = util.by_pixel(0, -27.25)
-              },
-              -- Centrifuge B
-              {
-                filename = "__base__/graphics/entity/centrifuge/centrifuge-B-light.png",
-                priority = "high",
-                scale = 0.5,
-                blend_mode = "additive", -- centrifuge
-                line_length = 8,
-                width = 131,
-                height = 206,
-                frame_count = 64,
-                draw_as_glow = true,
-                shift = util.by_pixel(16.75, 0.5)
-              },
-              -- Centrifuge A
-              {
-                filename = "__base__/graphics/entity/centrifuge/centrifuge-A-light.png",
-                priority = "high",
-                scale = 0.5,
-                blend_mode = "additive", -- centrifuge
-                line_length = 8,
-                width = 108,
-                height = 197,
-                frame_count = 64,
-                draw_as_glow = true,
-                shift = util.by_pixel(-23.5, -1.75)
-              }
-            }
-          }
-        }
-      }
     },
     open_sound = sounds.machine_open,
     close_sound = sounds.machine_close,
