@@ -1,7 +1,6 @@
 local resource_autoplace = require("__core__.lualib.resource-autoplace")
 local tile_sounds = require("__base__.prototypes.tile.tile-sounds")
 local util = require("__core__.lualib.util")
-local hash = require("lib.hash")
 
 -- based on stone prototype
 local function shard(element, color, order)
