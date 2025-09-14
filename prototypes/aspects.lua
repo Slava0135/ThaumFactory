@@ -6,11 +6,12 @@ local item_aspects = {}
 mod_data.item_aspects = item_aspects
 local hash = require("lib.hash")
 
-local function aspect(element, color, tier, component1, component2)
-  -- aspects are ordered by tier
+local function aspect(element, color, tier, component1, component2, override_order)
+  -- aspects are ordered by tier 
   -- aspects are additionally ordered by hash based on their names
   -- so each one is (very) unlikely to have the same order while avoiding assigning order manually
-  local order = hash:hash(element)
+  -- primary aspects are exception
+  local order = override_order or hash:hash(element)
   aspects[element] = { color = color, tier = tier, order = order, component1 = component1, component2 = component2 }
   data:extend({
     {
@@ -55,12 +56,12 @@ end
 -- not all aspects (TC 4) are added, some of them are not used much / removed in TC 6
 
 -- primal
-aspect("air", util.color("#FFFF7E"), 0)
-aspect("fire", util.color("#FF5A01"), 0)
-aspect("water", util.color("#3CD4FC"), 0)
-aspect("earth", util.color("#56C000"), 0)
-aspect("order", util.color("#D5D4EC"), 0)
-aspect("entropy", util.color("#404040"), 0)
+aspect("air", util.color("#FFFF7E"), 0, nil, nil, 1)
+aspect("earth", util.color("#56C000"), 0, nil, nil, 2)
+aspect("fire", util.color("#FF5A01"), 0, nil, nil, 3)
+aspect("water", util.color("#3CD4FC"), 0, nil, nil, 4)
+aspect("order", util.color("#D5D4EC"), 0, nil, nil, 5)
+aspect("entropy", util.color("#404040"), 0, nil, nil, 6)
 
 -- compound T1
 aspect("ice", util.color("#E1FFFF"), 1, "fire", "entropy")

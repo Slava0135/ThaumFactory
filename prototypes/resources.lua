@@ -1,11 +1,10 @@
 local resource_autoplace = require("__core__.lualib.resource-autoplace")
 local tile_sounds = require("__base__.prototypes.tile.tile-sounds")
 local util = require("__core__.lualib.util")
+local hash = require("lib.hash")
 
 -- based on stone prototype
-local function shard(element, color)
-  local e = string.sub(element, 1, 1) -- for ordering purposes first letter is used
-
+local function shard(element, color, order)
   data.raw.planet.nauvis.map_gen_settings.autoplace_controls["thaumfactory-" .. element .. "-infused-stone"] = {}
   data.raw.planet.nauvis.map_gen_settings.autoplace_settings.entity.settings["thaumfactory-" .. element .. "-infused-stone"] = {}
 
@@ -34,7 +33,7 @@ local function shard(element, color)
         }
       },
       flags = { "placeable-neutral" },
-      order = "t-" .. e,
+      order = "t-" .. order,
       tree_removal_probability = 0,
       tree_removal_max_distance = 0,
       minable = {
@@ -48,7 +47,7 @@ local function shard(element, color)
       selection_box = { { -0.5, -0.5 }, { 0.5, 0.5 } },
       autoplace = resource_autoplace.resource_autoplace_settings({
         name = "thaumfactory-" .. element .. "-infused-stone",
-        order = "t-" .. e,
+        order = "t-" .. order,
         base_density = 2,
         base_spots_per_km2 = 5,
         regular_rq_factor_multiplier = 1.0,
@@ -76,15 +75,15 @@ local function shard(element, color)
       name = "thaumfactory-" .. element .. "-infused-stone",
       localised_name = { "", "[entity=thaumfactory-" .. element .. "-infused-stone] ", { "entity-name.thaumfactory-" .. element .. "-infused-stone" } },
       richness = true,
-      order = "t-" .. e,
+      order = "t-" .. order,
       category = "resource"
     },
   })
 end
 
-shard("air", util.color("#FFFF7E"))
-shard("fire", util.color("#FF5A01"))
-shard("water", util.color("#3CD4FC"))
-shard("earth", util.color("#56C000"))
-shard("order", util.color("#D5D4EC"))
-shard("entropy", util.color("#404040"))
+shard("air", util.color("#FFFF7E"), 1)
+shard("earth", util.color("#56C000"), 2)
+shard("fire", util.color("#FF5A01"), 3)
+shard("water", util.color("#3CD4FC"), 4)
+shard("order", util.color("#D5D4EC"), 5)
+shard("entropy", util.color("#404040"), 6)
