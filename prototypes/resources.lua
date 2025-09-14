@@ -49,7 +49,8 @@ local function shard(element, color)
       autoplace = resource_autoplace.resource_autoplace_settings({
         name = "thaumfactory-" .. element .. "-infused-stone",
         order = "t-" .. e,
-        base_density = 4,
+        base_density = 2,
+        base_spots_per_km2 = 5,
         regular_rq_factor_multiplier = 1.0,
         starting_rq_factor_multiplier = 1.1
       }),
