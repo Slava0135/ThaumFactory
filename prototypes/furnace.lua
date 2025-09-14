@@ -90,32 +90,36 @@ data:extend({
           name = "thaumcraft-magic-smoke",
           deviation = { 0.1, 0.1 },
           frequency = 1.1,
-          position = { -0.7, -0.8 },
-          starting_vertical_speed = 0.08,
+          height = 1.2,
+          position = { -0.7, 0.7 },
+          starting_vertical_speed = 0.01,
           starting_frame_deviation = 60
         },
         {
           name = "thaumcraft-magic-smoke",
           deviation = { 0.1, 0.1 },
           frequency = 1.2,
-          position = { 0.7, -0.8 },
-          starting_vertical_speed = 0.08,
+          height = 1.2,
+          position = { 0.7, -0.7 },
+          starting_vertical_speed = 0.01,
           starting_frame_deviation = 60
         },
         {
           name = "thaumcraft-magic-smoke",
           deviation = { 0.1, 0.1 },
           frequency = 1.3,
-          position = { -0.7, -1.8 },
-          starting_vertical_speed = 0.08,
+          height = 1.2,
+          position = { 0.7, 0.7 },
+          starting_vertical_speed = 0.01,
           starting_frame_deviation = 60
         },
         {
           name = "thaumcraft-magic-smoke",
           deviation = { 0.1, 0.1 },
           frequency = 1.4,
-          position = { 0.7, -1.8 },
-          starting_vertical_speed = 0.08,
+          height = 1.2,
+          position = { -0.7, -0.7 },
+          starting_vertical_speed = 0.01,
           starting_frame_deviation = 60
         }
       }
