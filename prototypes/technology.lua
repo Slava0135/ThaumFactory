@@ -1,4 +1,4 @@
-local STUB = "__base__/graphics/technology/automation-science-pack.png"
+local util = require("__core__.lualib.util")
 
 local function element_tech(element)
   local tech = "thaumfactory-aspect-" .. element
@@ -6,8 +6,14 @@ local function element_tech(element)
     {
       type = "technology",
       name = tech,
-      icon = STUB,
-      icon_size = 256,
+      icons = {
+        {
+          icon = "__thaumfactory__/graphics/technologies/" .. element .. ".png",
+          icon_size = 256,
+          tint = util.color("#800080")
+        }
+      },
+      icon = "__thaumfactory__/graphics/technologies/" .. element .. ".png",
       effects =
       {
         {
@@ -36,8 +42,13 @@ data:extend({
   {
     type = "technology",
     name = "thaumfactory-arcane-lab",
-    icon = STUB,
-    icon_size = 256,
+    icons = {
+      {
+        icon = "__thaumfactory__/graphics/technologies/arcane-lab.png",
+        icon_size = 256,
+        tint = util.color("#800080")
+      }
+    },
     effects =
     {
       {
@@ -56,8 +67,13 @@ data:extend({
   {
     type = "technology",
     name = "thaumfactory-arcane-fabricator",
-    icon = STUB,
-    icon_size = 256,
+    icons = {
+      {
+        icon = "__thaumfactory__/graphics/technologies/arcane-fabricator.png",
+        icon_size = 256,
+        tint = util.color("#800080")
+      }
+    },
     effects =
     {
       {
@@ -84,8 +100,13 @@ data:extend({
   {
     type = "technology",
     name = "thaumfactory-crystallization",
-    icon = STUB,
-    icon_size = 256,
+    icons = {
+      {
+        icon = "__thaumfactory__/graphics/technologies/crystallization.png",
+        icon_size = 256,
+        tint = util.color("#800080")
+      }
+    },
     effects = {}, -- final-fixes
     prerequisites = { "thaumfactory-arcane-fabricator", "thaumfactory-alchemical-furnace" },
     unit =
@@ -106,8 +127,13 @@ data:extend({
   {
     type = "technology",
     name = "thaumfactory-alchemical-furnace",
-    icon = STUB,
-    icon_size = 256,
+    icons = {
+      {
+        icon = "__thaumfactory__/graphics/technologies/alchemical-furnace.png",
+        icon_size = 256,
+        tint = util.color("#800080")
+      }
+    },
     effects =
     {
       {
@@ -131,8 +157,13 @@ data:extend({
   {
     type = "technology",
     name = "thaumfactory-alchemical-centrifuge",
-    icon = STUB,
-    icon_size = 256,
+    icons = {
+      {
+        icon = "__thaumfactory__/graphics/technologies/alchemical-centrifuge.png",
+        icon_size = 256,
+        tint = util.color("#800080")
+      }
+    },
     effects =
     {
       {
@@ -156,8 +187,13 @@ data:extend({
   {
     type = "technology",
     name = "thaumfactory-aura-pylon",
-    icon = STUB,
-    icon_size = 256,
+    icons = {
+      {
+        icon = "__thaumfactory__/graphics/technologies/aura-pylon.png",
+        icon_size = 256,
+        tint = util.color("#800080")
+      }
+    },
     effects =
     {
       {
@@ -181,8 +217,21 @@ data:extend({
   {
     type = "technology",
     name = "thaumfactory-aura-pylon-fire",
-    icon = STUB,
-    icon_size = 256,
+    icons = {
+      {
+        icon = "__thaumfactory__/graphics/technologies/aura-pylon.png",
+        icon_size = 256,
+        tint = util.color("#800080"),
+        scale = 0.5,
+        shift = { 128, 64 + 32 },
+      },
+      {
+        icon = "__thaumfactory__/graphics/icons/fire.png",
+        scale = 1,
+        icon_size = 64,
+        shift = { 128, 0 },
+      }
+    },
     effects = {},
     prerequisites = { "thaumfactory-aura-pylon" },
     unit =
@@ -195,8 +244,21 @@ data:extend({
   {
     type = "technology",
     name = "thaumfactory-aura-pylon-craft",
-    icon = STUB,
-    icon_size = 256,
+    icons = {
+      {
+        icon = "__thaumfactory__/graphics/technologies/aura-pylon.png",
+        icon_size = 256,
+        tint = util.color("#800080"),
+        scale = 0.5,
+        shift = { 128, 64 + 32 },
+      },
+      {
+        icon = "__thaumfactory__/graphics/icons/craft.png",
+        scale = 1,
+        icon_size = 64,
+        shift = { 128, 0 },
+      }
+    },
     effects = {},
     prerequisites = { "thaumfactory-aura-pylon" },
     unit =
@@ -209,8 +271,21 @@ data:extend({
   {
     type = "technology",
     name = "thaumfactory-aura-pylon-plant",
-    icon = STUB,
-    icon_size = 256,
+    icons = {
+      {
+        icon = "__thaumfactory__/graphics/technologies/aura-pylon.png",
+        icon_size = 256,
+        tint = util.color("#800080"),
+        scale = 0.5,
+        shift = { 128, 64 + 32 },
+      },
+      {
+        icon = "__thaumfactory__/graphics/icons/plant.png",
+        scale = 1,
+        icon_size = 64,
+        shift = { 128, 0 },
+      }
+    },
     effects = {},
     prerequisites = { "thaumfactory-aura-pylon" },
     unit =
@@ -223,8 +298,21 @@ data:extend({
   {
     type = "technology",
     name = "thaumfactory-aura-pylon-energy",
-    icon = STUB,
-    icon_size = 256,
+    icons = {
+      {
+        icon = "__thaumfactory__/graphics/technologies/aura-pylon.png",
+        icon_size = 256,
+        tint = util.color("#800080"),
+        scale = 0.5,
+        shift = { 128, 64 + 32 },
+      },
+      {
+        icon = "__thaumfactory__/graphics/icons/energy.png",
+        scale = 1,
+        icon_size = 64,
+        shift = { 128, 0 },
+      }
+    },
     effects = {},
     prerequisites = { "thaumfactory-aura-pylon" },
     unit =
@@ -237,8 +325,21 @@ data:extend({
   {
     type = "technology",
     name = "thaumfactory-aura-pylon-mine",
-    icon = STUB,
-    icon_size = 256,
+    icons = {
+      {
+        icon = "__thaumfactory__/graphics/technologies/aura-pylon.png",
+        icon_size = 256,
+        tint = util.color("#800080"),
+        scale = 0.5,
+        shift = { 128, 64 + 32 },
+      },
+      {
+        icon = "__thaumfactory__/graphics/icons/mine.png",
+        scale = 1,
+        icon_size = 64,
+        shift = { 128, 0 },
+      }
+    },
     effects = {},
     prerequisites = { "thaumfactory-aura-pylon" },
     unit =
@@ -251,8 +352,21 @@ data:extend({
   {
     type = "technology",
     name = "thaumfactory-aura-pylon-earth",
-    icon = STUB,
-    icon_size = 256,
+    icons = {
+      {
+        icon = "__thaumfactory__/graphics/technologies/aura-pylon.png",
+        icon_size = 256,
+        tint = util.color("#800080"),
+        scale = 0.5,
+        shift = { 128, 64 + 32 },
+      },
+      {
+        icon = "__thaumfactory__/graphics/icons/earth.png",
+        scale = 1,
+        icon_size = 64,
+        shift = { 128, 0 },
+      }
+    },
     effects = {},
     prerequisites = { "thaumfactory-aura-pylon" },
     unit =
@@ -265,8 +379,13 @@ data:extend({
   {
     type = "technology",
     name = "thaumfactory-arcane-stone-wall",
-    icon = STUB,
-    icon_size = 256,
+    icons = {
+      {
+        icon = "__thaumfactory__/graphics/technologies/arcane-stone-wall.png",
+        icon_size = 256,
+        tint = util.color("#800080")
+      }
+    },
     effects =
     {
       {
@@ -293,8 +412,21 @@ data:extend({
   {
     type = "technology",
     name = "thaumfactory-aspect-firearm-magazine",
-    icon = STUB,
-    icon_size = 256,
+    icons = {
+      {
+        icon = "__base__/graphics/technology/military.png",
+        icon_size = 256,
+        scale = 0.5,
+        shift = { 128, 64 + 32 },
+      },
+      {
+        icon = "__thaumfactory__/graphics/icons/magic.png",
+        scale = 1,
+        tint = util.color("#800080"),
+        icon_size = 64,
+        shift = { 128, 0 },
+      }
+    },
     effects =
     {
       {
@@ -325,8 +457,13 @@ data:extend({
   {
     type = "technology",
     name = "thaumfactory-alumentum",
-    icon = STUB,
-    icon_size = 256,
+    icons = {
+      {
+        icon = "__thaumfactory__/graphics/technologies/alumentum.png",
+        icon_size = 256,
+        tint = util.color("#800080")
+      }
+    },
     effects =
     {
       {
@@ -350,8 +487,21 @@ data:extend({
   {
     type = "technology",
     name = "thaumfactory-native-iron-cluster",
-    icon = STUB,
-    icon_size = 256,
+    icons = {
+      {
+        icon = "__thaumfactory__/graphics/technologies/alchemical-furnace.png",
+        icon_size = 256,
+        tint = util.color("#800080"),
+        scale = 0.5,
+        shift = { 128, 64 + 32 },
+      },
+      {
+        icon = "__base__/graphics/icons/iron-ore.png",
+        icon_size = 64,
+        scale = 1,
+        shift = { 128, 0 },
+      }
+    },
     effects =
     {
       {
@@ -378,8 +528,21 @@ data:extend({
   {
     type = "technology",
     name = "thaumfactory-native-copper-cluster",
-    icon = STUB,
-    icon_size = 256,
+    icons = {
+      {
+        icon = "__thaumfactory__/graphics/technologies/alchemical-furnace.png",
+        icon_size = 256,
+        tint = util.color("#800080"),
+        scale = 0.5,
+        shift = { 128, 64 + 32 },
+      },
+      {
+        icon = "__base__/graphics/icons/copper-ore.png",
+        icon_size = 64,
+        scale = 1,
+        shift = { 128, 0 },
+      }
+    },
     effects =
     {
       {
@@ -406,8 +569,21 @@ data:extend({
   {
     type = "technology",
     name = "thaumfactory-native-uranium-cluster",
-    icon = STUB,
-    icon_size = 256,
+    icons = {
+      {
+        icon = "__thaumfactory__/graphics/technologies/alchemical-furnace.png",
+        icon_size = 256,
+        tint = util.color("#800080"),
+        scale = 0.5,
+        shift = { 128, 64 + 32 },
+      },
+      {
+        icon = "__base__/graphics/icons/uranium-ore.png",
+        icon_size = 64,
+        scale = 1,
+        shift = { 128, 0 },
+      }
+    },
     effects =
     {
       {
@@ -435,8 +611,13 @@ data:extend({
   {
     type = "technology",
     name = "thaumfactory-runes",
-    icon = STUB,
-    icon_size = 256,
+    icons = {
+      {
+        icon = "__thaumfactory__/graphics/technologies/runes.png",
+        icon_size = 256,
+        tint = util.color("#800080")
+      }
+    },
     effects = {},
     prerequisites = { "thaumfactory-crystallization" },
     unit =
@@ -452,8 +633,21 @@ data:extend({
   {
     type = "technology",
     name = "thaumfactory-fire-rune-stone",
-    icon = STUB,
-    icon_size = 256,
+    icons = {
+      {
+        icon = "__thaumfactory__/graphics/technologies/runes.png",
+        icon_size = 256,
+        tint = util.color("#800080"),
+        scale = 0.5,
+        shift = { 128, 64 + 32 },
+      },
+      {
+        icon = "__thaumfactory__/graphics/icons/fire.png",
+        icon_size = 64,
+        scale = 1,
+        shift = { 128, 0 },
+      }
+    },
     effects =
     {
       {
@@ -475,8 +669,21 @@ data:extend({
   {
     type = "technology",
     name = "thaumfactory-life-rune-stone",
-    icon = STUB,
-    icon_size = 256,
+    icons = {
+      {
+        icon = "__thaumfactory__/graphics/technologies/runes.png",
+        icon_size = 256,
+        tint = util.color("#800080"),
+        scale = 0.5,
+        shift = { 128, 64 + 32 },
+      },
+      {
+        icon = "__thaumfactory__/graphics/icons/life.png",
+        icon_size = 64,
+        scale = 1,
+        shift = { 128, 0 },
+      }
+    },
     effects =
     {
       {
@@ -498,8 +705,21 @@ data:extend({
   {
     type = "technology",
     name = "thaumfactory-motion-rune-stone",
-    icon = STUB,
-    icon_size = 256,
+    icons = {
+      {
+        icon = "__thaumfactory__/graphics/technologies/runes.png",
+        icon_size = 256,
+        tint = util.color("#800080"),
+        scale = 0.5,
+        shift = { 128, 64 + 32 },
+      },
+      {
+        icon = "__thaumfactory__/graphics/icons/motion.png",
+        icon_size = 64,
+        scale = 1,
+        shift = { 128, 0 },
+      }
+    },
     effects =
     {
       {
@@ -521,8 +741,21 @@ data:extend({
   {
     type = "technology",
     name = "thaumfactory-order-rune-stone",
-    icon = STUB,
-    icon_size = 256,
+    icons = {
+      {
+        icon = "__thaumfactory__/graphics/technologies/runes.png",
+        icon_size = 256,
+        tint = util.color("#800080"),
+        scale = 0.5,
+        shift = { 128, 64 + 32 },
+      },
+      {
+        icon = "__thaumfactory__/graphics/icons/order.png",
+        icon_size = 64,
+        scale = 1,
+        shift = { 128, 0 },
+      }
+    },
     effects =
     {
       {
@@ -544,8 +777,21 @@ data:extend({
   {
     type = "technology",
     name = "thaumfactory-light-rune-stone",
-    icon = STUB,
-    icon_size = 256,
+    icons = {
+      {
+        icon = "__thaumfactory__/graphics/technologies/runes.png",
+        icon_size = 256,
+        tint = util.color("#800080"),
+        scale = 0.5,
+        shift = { 128, 64 + 32 },
+      },
+      {
+        icon = "__thaumfactory__/graphics/icons/light.png",
+        icon_size = 64,
+        scale = 1,
+        shift = { 128, 0 },
+      }
+    },
     effects =
     {
       {
@@ -567,8 +813,21 @@ data:extend({
   {
     type = "technology",
     name = "thaumfactory-mine-rune-stone",
-    icon = STUB,
-    icon_size = 256,
+    icons = {
+      {
+        icon = "__thaumfactory__/graphics/technologies/runes.png",
+        icon_size = 256,
+        tint = util.color("#800080"),
+        scale = 0.5,
+        shift = { 128, 64 + 32 },
+      },
+      {
+        icon = "__thaumfactory__/graphics/icons/mine.png",
+        icon_size = 64,
+        scale = 1,
+        shift = { 128, 0 },
+      }
+    },
     effects =
     {
       {
@@ -590,8 +849,21 @@ data:extend({
   {
     type = "technology",
     name = "thaumfactory-tool-rune-stone",
-    icon = STUB,
-    icon_size = 256,
+    icons = {
+      {
+        icon = "__thaumfactory__/graphics/technologies/runes.png",
+        icon_size = 256,
+        tint = util.color("#800080"),
+        scale = 0.5,
+        shift = { 128, 64 + 32 },
+      },
+      {
+        icon = "__thaumfactory__/graphics/icons/tool.png",
+        icon_size = 64,
+        scale = 1,
+        shift = { 128, 0 },
+      }
+    },
     effects =
     {
       {
@@ -613,8 +885,21 @@ data:extend({
   {
     type = "technology",
     name = "thaumfactory-craft-rune-stone",
-    icon = STUB,
-    icon_size = 256,
+    icons = {
+      {
+        icon = "__thaumfactory__/graphics/technologies/runes.png",
+        icon_size = 256,
+        tint = util.color("#800080"),
+        scale = 0.5,
+        shift = { 128, 64 + 32 },
+      },
+      {
+        icon = "__thaumfactory__/graphics/icons/craft.png",
+        icon_size = 64,
+        scale = 1,
+        shift = { 128, 0 },
+      }
+    },
     effects =
     {
       {
