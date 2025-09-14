@@ -1,6 +1,9 @@
 local item_sounds = require("__base__.prototypes.item_sounds")
+local mod_data = require("prototypes.mod-data"):get()
 
 local function rune(element)
+  local order = mod_data.aspects[element].order
+  local tier = mod_data.aspects[element].tier
   data:extend({
     {
       type = "tool",
@@ -16,7 +19,7 @@ local function rune(element)
         }
       },
       subgroup = "thaumfactory-runes",
-      order = "t-" .. element .. "-rune-stone",
+      order = "t-" .. tier .. "-" .. order .. "-rune-stone",
       inventory_move_sound = item_sounds.brick_inventory_move,
       pick_sound = item_sounds.brick_inventory_pickup,
       drop_sound = item_sounds.brick_inventory_move,
