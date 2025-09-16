@@ -68,6 +68,14 @@ When creating new art, make sure to specify license too!
 
 All attributions must go to `attribution.md` file in the corresponding directory.
 
+## 3D modelling
+
+### Runes
+
+Prefer using runes from [Elder Futhark](https://en.wikipedia.org/wiki/Elder_Futhark).
+
+Use [Noto Sans Runic font](https://fonts.google.com/noto/specimen/Noto+Sans+Runic).
+
 ## Localization
 
 Check [localization tutorial](https://wiki.factorio.com/Tutorial:Localisation).
