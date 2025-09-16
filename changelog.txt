@@ -1,0 +1,10 @@
+---------------------------------------------------------------------------------------------------
+Version: 0.1.1
+Date: 16. 09. 2025
+  Bugfixes:
+    - Fixed Nuclear Science mod ("atan-nuclear-science") incompatibility with "Native Uranium Cluster" technology requirements.
+---------------------------------------------------------------------------------------------------
+Version: 0.1.0
+Date: 14. 09. 2025
+  Major Features:
+    - Initial release.
