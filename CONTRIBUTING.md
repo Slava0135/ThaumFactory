@@ -4,6 +4,8 @@
 
 It is recommended to use [VSCode](https://code.visualstudio.com) editor with [Lua plugin by sumneko](https://marketplace.visualstudio.com/items?itemName=sumneko.lua).
 
+For 3D models use [Blender](https://www.blender.org) or other modelling software that supports open formats.
+
 ## Setup
 
 ### Clone the repository
