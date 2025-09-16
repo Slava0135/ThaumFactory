@@ -85,7 +85,7 @@ data:extend({
       smoke =
       {
         {
-          name = "thaumcraft-magic-smoke",
+          name = "thaumfactory-magic-smoke",
           deviation = { 0.1, 0.1 },
           frequency = 1.1,
           height = 1.2,
@@ -94,7 +94,7 @@ data:extend({
           starting_frame_deviation = 60
         },
         {
-          name = "thaumcraft-magic-smoke",
+          name = "thaumfactory-magic-smoke",
           deviation = { 0.1, 0.1 },
           frequency = 1.2,
           height = 1.2,
@@ -103,7 +103,7 @@ data:extend({
           starting_frame_deviation = 60
         },
         {
-          name = "thaumcraft-magic-smoke",
+          name = "thaumfactory-magic-smoke",
           deviation = { 0.1, 0.1 },
           frequency = 1.3,
           height = 1.2,
@@ -112,7 +112,7 @@ data:extend({
           starting_frame_deviation = 60
         },
         {
-          name = "thaumcraft-magic-smoke",
+          name = "thaumfactory-magic-smoke",
           deviation = { 0.1, 0.1 },
           frequency = 1.4,
           height = 1.2,

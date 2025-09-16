@@ -5,7 +5,7 @@ local trivial_smoke = smoke_animations.trivial_smoke
 data:extend
 {
   trivial_smoke {
-    name = "thaumcraft-magic-smoke",
+    name = "thaumfactory-magic-smoke",
     color = { r = 0.5, g = 0, b = 0.5, a = 0.4 }
   },
 }
