@@ -1,4 +1,4 @@
-if script.active_mods["atan-nuclear-science"] then
+if mods["atan-nuclear-science"] then
   -- the mod adds nuclear science to tech, but the arcane lab doesn't accept it
   local ingredients = data.raw["technology"]["thaumfactory-native-uranium-cluster"].unit.ingredients
   -- only keep thaumfactory items as ingredients
